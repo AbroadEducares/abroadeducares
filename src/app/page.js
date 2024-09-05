@@ -48,14 +48,12 @@ export default function HomePage() {
             <EnquiryForm />
           </div>
         </div>
-      </section>
-
-      {/* Immigration experts section */}
-      <section className="flex flex-col-reverse lg:flex-row  w-full">
+      </section>  {/* Immigration experts section */}
+      <section className="flex flex-col-reverse lg:flex-row relative w-full -mt-[5rem] z-30 ">
         <div className="w-full lg:w-[50%] flex items-end">
           <div className="ml-6 mt-8 lg:mt-0 lg:ml-10">
             <p>
-              Don’t Hesitate, Contact us for Better Help and Services.{" "}
+Don’t Hesitate, Contact us for Better Help and Services.{" "}
               <span className="font-bold">Explore All Categories.</span>
             </p>
           </div>
@@ -130,6 +128,83 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* Experienced staff */}
+      <section className="my-12 py-12">
+        <div className="flex flex-row  justify-center gap-5">
+          {/* left div */}
+          <div className="w-[50%] flex items-center justify-center">
+            {/* wrapper */}
+            <div className="flex gap-4">
+            <div className="flex flex-col gap-4 items-center justify-center">
+              {/* below two are two img */}
+              <div
+                className="w-[17rem] h-[17rem]"
+                style={{
+                  backgroundImage: `url(${passport.src})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+              <div   className="w-[17rem] h-[17rem]"
+                style={{
+                  backgroundImage: `url(${hat.src})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </div>
+            <div className="flex items-center">
+              {/* below div is for one image */}
+              <div   className="w-[20rem] h-[30rem]"
+                style={{
+                  backgroundImage: `url(${happyTravels.src})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </div>
+            </div>
+          </div>
+
+          {/* right div */}
+          <div className="w-[50%] max-w-6xl">
+          <div className="w-[95%] flex flex-col lg:flex-col ">
+            <div className="px-2 sm:px-0 w-full ">
+              <h3 className=" text-blue-700 uppercase font-regular text-md">
+                About Abroad Educare
+              </h3>
+              <div className="mt-4 flex gap-5 ">
+                {/* white line */}
+                <div className="w-[0.3rem]  bg-blue-600"></div>
+                <div className="w-full lg:w-[80%]">
+                  <h2 className="lg:text-[2.6rem] font-light">
+                    Immigration Services From
+                  </h2>
+                  <h2 className="font-black text-gray-800 lg:leading-none  lg:text-[2.6rem] ">
+                    Experienced Staff
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row mt-10 gap-4">
+              <p className=" text-sm text-gray-800 text-wrap w-[40%]">
+                Changes in immigration legislation are followed by everyone in
+                our organization. Because of our many years of expertise, we are
+                able to handle every matter swiftly and effectively. This is
+                demonstrated by the constantly growing group of satisfied
+                Clients.{" "}
+              </p>
+              <p className=" text-sm text-gray-800 text-wrap w-[40%]">
+                Each case is unique, but we take the time to get to know our
+                customers and find the best solution for them. We are licensed
+                experts who are constantly expanding our expertise through
+                professional development initiatives.{" "}
+              </p>
+            </div>
+          </div>
           </div>
         </div>
       </section>
