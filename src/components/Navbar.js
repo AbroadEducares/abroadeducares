@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { MdOutlineAccessTimeFilled, MdEmail, MdLocationOn,MdMenuOpen, MdMenu,MdOutlineLocalPhone  } from "react-icons/md";
 import logo from '@public/blackLogo.png';
-
+import Link from 'next/link';
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   return (
@@ -20,7 +20,7 @@ export default function Navbar() {
            
             <div className="flex items-center space-x-1">
               <MdEmail size={20} />
-              <a href="mailto:support@abroadeducares.com">support@abroadeducares.com</a>
+              <Link href="mailto:support@abroadeducares.com">support@abroadeducares.com</Link> 
             </div>
             <span className="w-[0.5px] h-6 bg-white opacity-40"></span>
 
@@ -30,15 +30,15 @@ export default function Navbar() {
             </div>
           </address>
           <div className="space-x-4 hidden lg:flex items-center">
-            <a href="#" aria-label="Facebook">
+            <Link href="#" aria-label="Facebook">
               <FaFacebookF />
-            </a>
-            <a href="#" aria-label="Twitter">
+            </Link> 
+            <Link href="#" aria-label="Twitter">
               <FaTwitter />
-            </a>
-            <a href="#" aria-label="Instagram">
+            </Link> 
+            <Link href="#" aria-label="Instagram">
               <FaInstagram />
-            </a>
+            </Link> 
           </div>
         </div>
       </section>
@@ -46,46 +46,46 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav className="px-5 py-4">
         <div className="mx-auto flex justify-between items-center">
-          <a href="/" className="flex md:ml-5 items-center">
+          <Link href="/" className="flex md:ml-5 items-center">
             <img
               src={logo.src} // replace with your logo
               alt="ABROAD EDUCARES Logo"
               className="h-8"
             />
            
-          </a>
+          </Link> 
 
           {/* Desktop Menu */}
           <ul className="hidden lg:flex space-x-8">
   <li className="group relative">
-    <a href="#" className="text-black hover:text-orange-500">
+    <Link href="/About" className="text-black hover:text-orange-500">
       About Us
       <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
-    </a>
+    </Link>
   </li>
-  <li className="group relative">
-    <a href="#" className="text-black hover:text-orange-500">
+  {/* <li className="group relative">
+    <Link href="#" className="text-black hover:text-orange-500">
       Coaching
       <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
-    </a>
-  </li>
+    </Link> 
+  </li> */}
   <li className="group relative">
-    <a href="#" className="text-black hover:text-orange-500">
+    <Link href="/Visa" className="text-black hover:text-orange-500">
       Visa
       <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
-    </a>
+    </Link> 
   </li>
   <li className="group relative">
-    <a href="#" className="text-black hover:text-orange-500">
+    <Link href="/Blog" className="text-black hover:text-orange-500">
       Blog
       <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
-    </a>
+    </Link> 
   </li>
   <li className="group relative">
-    <a href="#" className="text-black hover:text-orange-500">
+    <Link href="/Contact" className="text-black hover:text-orange-500">
       Contact
       <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
-    </a>
+    </Link> 
   </li>
 </ul>
 
@@ -93,7 +93,7 @@ export default function Navbar() {
           {/* Contact Button */}
           <div className="hidden lg:flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-700 transition-all duration-300">
             <MdOutlineLocalPhone  className="mr-2" />
-            <a href="tel:+919501919187" className="hover:underline transition-all duration-300">+91-9501919187</a>
+            <a href="tel:+919501919187" className="hover:underline transition-all duration-300">+91-9501919187</a> 
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -112,19 +112,19 @@ export default function Navbar() {
         <div className="lg:hidden bg-white">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li>
-              <a href="#" className="text-black hover:text-orange-500">About Us</a>
+              <Link href="#" className="text-black hover:text-orange-500">About Us</Link> 
             </li>
             <li>
-              <a href="#" className="text-black hover:text-orange-500">Coaching</a>
+              <Link href="#" className="text-black hover:text-orange-500">Coaching</Link> 
             </li>
             <li>
-              <a href="#" className="text-black hover:text-orange-500">Visa</a>
+              <Link href="#" className="text-black hover:text-orange-500">Visa</Link> 
             </li>
             <li>
-              <a href="#" className="text-black hover:text-orange-500">Blog</a>
+              <Link href="#" className="text-black hover:text-orange-500">Blog</Link> 
             </li>
             <li>
-              <a href="#" className="text-black hover:text-orange-500">Contact</a>
+              <Link href="#" className="text-black hover:text-orange-500">Contact</Link> 
             </li>
            
           </ul>

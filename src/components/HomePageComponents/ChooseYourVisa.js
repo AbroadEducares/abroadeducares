@@ -18,21 +18,21 @@ const ChooseYourVisa = () => {
             title:"Visitor Visa",
             para:"A visitor visa grants temporary entry for tourism or short-term business, with restrictions on work or study. Its validity is subject to the purpose of visit and the issuing country's regulations."
         },
-        {
-            icon:<FaUserTie size={45} />,
-            title:"Work Visa",
-            para:"We will help you throughout the Immigration Process of your country of dreams. This also assisting you with a passive job search on the foreign land through our established contacts."
-        },
-        {
-            icon:<FaSackDollar size={45} />,
-            title:"Educational Trips",
-            para:"Educational trips are immersive learning experiences that take students beyond the classroom, fostering practical knowledge and cultural understanding. They offer invaluable insights, enriching academic pursuits and personal growth."
-        },
-        {
-            icon:<FaUsers size={45} />,
-            title:"Student And Teacher Exchange programs",
-            para:"Student and teacher exchange programs enable international learning experiences, fostering cultural understanding and academic collaboration, ultimately enriching both participants' educational journeys.",
-        }
+        // {
+        //     icon:<FaUserTie size={45} />,
+        //     title:"Work Visa",
+        //     para:"We will help you throughout the Immigration Process of your country of dreams. This also assisting you with a passive job search on the foreign land through our established contacts."
+        // },
+        // {
+        //     icon:<FaSackDollar size={45} />,
+        //     title:"Educational Trips",
+        //     para:"Educational trips are immersive learning experiences that take students beyond the classroom, fostering practical knowledge and cultural understanding. They offer invaluable insights, enriching academic pursuits and personal growth."
+        // },
+        // {
+        //     icon:<FaUsers size={45} />,
+        //     title:"Student And Teacher Exchange programs",
+        //     para:"Student and teacher exchange programs enable international learning experiences, fostering cultural understanding and academic collaboration, ultimately enriching both participants' educational journeys.",
+        // }
 
     ]
   return (

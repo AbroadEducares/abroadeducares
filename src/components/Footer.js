@@ -3,7 +3,7 @@ import whiteLogo from "@public/whiteLogo.png";
 import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import world_map from "@public/assets/images/HomePage/world_map.png";
 import Button from "@/components/Button";
-
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="">
@@ -74,22 +74,22 @@ const Footer = () => {
               <h6 className="font-bold mb-4 text-xl">Important Links</h6>
               <ul className="list-none">
                 <li className="mb-2">
-                  <a className="flex items-center text-sm font-normal hover:text-blue-600 cursor-pointer">
+                  <Link href="/About" className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300 cursor-pointer">
                     <span className="mr-2 text-blue-600 text-2xl">{">"}</span>{" "}
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a className="flex items-center text-sm font-normal hover:text-blue-600 cursor-pointer">
+                  <Link href="/Blog" className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300 cursor-pointer">
                     <span className="mr-2 text-blue-600 text-2xl">{">"}</span>{" "}
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a className="flex items-center text-sm font-normal hover:text-blue-600 cursor-pointer">
+                  <Link href="/Visa" className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300 cursor-pointer">
                     <span className="mr-2 text-blue-600 text-2xl">{">"}</span>{" "}
                     Visa
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -98,10 +98,10 @@ const Footer = () => {
               <h6 className="font-bold mb-4 text-xl">Support</h6>
               <ul className="list-none">
                 <li className="mb-2">
-                  <a className="flex items-center text-sm font-normal hover:text-blue-600 cursor-pointer">
+                  <Link href="/Contact" className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300 cursor-pointer">
                     <span className="mr-2 text-blue-600 text-2xl">{">"}</span>{" "}
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -110,28 +110,28 @@ const Footer = () => {
               <h6 className="font-bold mb-4 text-xl">Contact</h6>
               <ul className="list-none">
                 <li className="mb-2">
-                  <a className="flex items-center text-sm font-normal hover:text-blue-600">
+                  <div className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300">
                     <span className="mr-2 text-blue-600">{">"}</span> La Prisma
                     Market, Nagla Rd, Zirakpur, Punjab
-                  </a>
+                  </div>
                 </li>
                 <li className="mb-2">
-                  <a className="flex items-center text-sm font-normal hover:text-blue-600">
+                  <div className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300">
                     <span className="mr-2 text-blue-600">{">"}</span>{" "}
                     +91-9501919187
-                  </a>
+                  </div>
                 </li>
                 <li className="mb-2">
-                  <a className="flex items-center text-sm font-normal hover:text-blue-600">
+                  <div className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300">
                     <span className="mr-2 text-blue-600">{">"}</span>{" "}
                     support@abroadeducares.com
-                  </a>
+                  </div>
                 </li>
                 <li className="mb-2">
-                  <a className="flex items-center text-sm font-normal hover:text-blue-600">
+                  <div className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300">
                     <span className="mr-2 text-blue-600">{">"}</span> Mon - Sat
                     : 09:00 AM - 06:00 PM
-                  </a>
+                  </div>
                 </li>
               </ul>
             </nav>

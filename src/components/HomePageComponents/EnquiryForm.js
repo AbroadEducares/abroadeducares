@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhoneAlt,FaBook  } from 'react-icons/fa';
 
-function EnquiryForm() {
+function EnquiryForm({MainForm,setMainForm}) {
   const [formValues, setFormValues] = useState({
     name: '',
     email: '',
     number: '',
-    state: '',
+    subject: '',
   });
 
   const [focusedField, setFocusedField] = useState('');
@@ -17,6 +17,7 @@ function EnquiryForm() {
       ...prevValues,
       [id]: value,
     }));
+    
   };
 
   const handleFocus = (e) => {
@@ -31,6 +32,8 @@ function EnquiryForm() {
     e.preventDefault();
     console.log('Form Submitted:', formValues);
     // Handle form submission here
+    setMainForm((prevVal) => ({ ...prevVal, formValues }));
+    console.log(MainForm);
   };
 
   return (
@@ -107,14 +110,14 @@ function EnquiryForm() {
             focusedField === 'state' ? 'border-blue-500' : 'border-gray-300'
           }`}
         >
-          <FaMapMarkerAlt
+          <FaBook 
             className={`text-gray-500 mr-2 ml-2 ${focusedField === 'state' ? 'text-blue-500' : ''}`}
           />
           <input
             className="appearance-none border-none w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none"
             id="state"
             type="text"
-            placeholder="Enter your state"
+            placeholder="Enter your subject"
             value={formValues.state}
             onChange={handleChange}
             onFocus={handleFocus}
