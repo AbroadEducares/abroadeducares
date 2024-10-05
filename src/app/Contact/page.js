@@ -124,7 +124,7 @@ const Contact = () => {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.1462937960073!2d76.82388097536878!3d30.62983437463406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4659b2daa167ad89%3A0x199f1b11440e9fdb!2sAbroad%20Educares!5e0!3m2!1sen!2sin!4v1726409144692!5m2!1sen!2sin"
               className="w-full "
               height={750}
-              allowFullscreen=""
+              allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

@@ -70,14 +70,14 @@ export default function Navbar() {
     </Link> 
   </li> */}
   <li className="group relative">
-    <Link href="/Visa" className="text-black hover:text-orange-500">
-      Visa
+    <Link href="/Services" className="text-black hover:text-orange-500">
+      Services
       <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
     </Link> 
   </li>
   <li className="group relative">
-    <Link href="/Blog" className="text-black hover:text-orange-500">
-      Blog
+    <Link href="/Agent" className="text-black hover:text-orange-500">
+      Become Our Agent
       <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
     </Link> 
   </li>

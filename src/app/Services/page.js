@@ -1,8 +1,9 @@
 import React from 'react'
-import passpost_with_plane from '@public/assets/images/VisaPage/passport_with_plane.jpg'
+import passpost_with_plane from '@public/assets/images/ServicesPage/passport_with_plane.jpg'
 import Link from 'next/link'
-import { FaGraduationCap, FaUserTie,FaUsers   } from "react-icons/fa";
+import { FaGraduationCap, FaMapMarkedAlt, FaUserTie,FaUsers   } from "react-icons/fa";
 import { FaSackDollar,FaHouseChimney  } from "react-icons/fa6";
+import Timeline from '@/components/ServicesComponent/Timeline'
 const page = () => {
   const GreatVisaContent = [
     {
@@ -17,28 +18,11 @@ const page = () => {
       icon:<FaSackDollar  size={45}
       className="text-blue-700 group-hover:text-white"/>,  
     },
-    {
-      title: "Work Visa",
-      text: "We will help you throughout the Immigration Process of your country of dreams. This also assisting you with a passive job search on the foreign land through our established contacts",
-      icon:<FaUserTie  size={45}
-      className="text-blue-700 group-hover:text-white"/>,  
-    },
-    {
-      title: "Family Visa",
-      text: "Receive Family visa for different countries by using various immigration programs, most suitable with respect to your current profile and future requirements.",
-      icon:<FaUsers  size={45}
-      className="text-blue-700 group-hover:text-white" />,  
-    },
-    {
-      title: "Permanent Residence Visa",
-      text: "Permanent Residence permit allows you to stay in a country permanently,We'll help you obtain permanent residency in your dream country.",
-      icon:<FaHouseChimney  size={45}
-      className="text-blue-700 group-hover:text-white"/>,  
-    },
+   
     {
       title: "Tourist Visa",
       text: "Our Immigration Team can help you to Travel the world with Tourist Visa allows immigrants to enjoy grandeur beauty &amp; Culture of the nation.",
-      icon:<FaHouseChimney  size={45}
+      icon:<FaMapMarkedAlt  size={45}
       className="text-blue-700 group-hover:text-white"/>,  
     },
   ]
@@ -57,7 +41,7 @@ const page = () => {
         {/* Text content with increased z-index for visibility */}
         <div className="relative z-10 w-full flex flex-col  items-center gap-5 text-white">
           <h2 className="font-extrabold text-5xl md:text-6xl uppercase">
-            About
+            Our Services
           </h2>
           <nav aria-label="breadcrumb">
             <ol className="flex space-x-2 text-white">
@@ -68,8 +52,8 @@ const page = () => {
               </li>
               <li className="">/</li>
               <li>
-                <Link href="/Visa" className=" hover:underline">
-                  Visa
+                <Link href="/Services" className=" hover:underline">
+                  Services
                 </Link>
               </li>
             </ol>
@@ -78,7 +62,7 @@ const page = () => {
       </section>
 
 {/* Choose your visa */}
-      <section className="mt-20 ">
+      <section className="my-20 py-10">
         <div className="w-[90%] md:w-[90%] xl:w-[85%] mx-auto">
           <div className="text-center">
             <h4 className="text-blue-700 uppercase font-regular text-md">
@@ -118,6 +102,8 @@ const page = () => {
           </div>
         </div>
       </section>
+
+      <Timeline/>
     </>
   )
 }
