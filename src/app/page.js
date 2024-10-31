@@ -11,9 +11,10 @@ import passport from "@public/assets/images/HomePage/passport.jpg";
 import { FaAward, FaThumbsUp } from "react-icons/fa";
 import VisaServiceCard from "@/components/HomePageComponents/VisaServiceCard";
 import ChooseYourVisa from "@/components/HomePageComponents/ChooseYourVisa";
+import CountriesCarousel from "@/components/ServicesComponent/CountriesCarousel";
 import FavouriteDestination from "@/components/HomePageComponents/FavouriteDestination";
 import testimonial_img from "@public/assets/images/HomePage/testimonial_img.jpg";
-import Pragat from "@public/assets/images/HomePage/Pragat.jpg";
+// import Pragat from "@public/assets/images/HomePage/Pragat.jpg";
 // import Sumandeep from "@public/assets/images/HomePage/Sumandeep.jpg";
 // import Chetan from "@public/assets/images/HomePage/Chetan.jpg";
 // import Himanshu from "@public/assets/images/HomePage/Himanshu.jpg";
@@ -25,7 +26,7 @@ import man_with_laptop from "@public/assets/images/HomePage/man_with_laptop.jpg"
 import student_with_books from "@public/assets/images/HomePage/student_with_books.jpg";
 import Man_in_BlueJeans from "@public/assets/images/HomePage/Man_in_BlueJeans.jpg";
 import TopView_of_document from "@public/assets/images/HomePage/TopView_of_document.jpg";
-
+import world_map from "@public/assets/images/HomePage/world_map.png";
 export default function HomePage() {
   const { user, setUser } = useContext(UserContext);
   const [Experience, setExperience] = useState(0);
@@ -304,7 +305,43 @@ export default function HomePage() {
 
       {/* Favourite destination */}
       <section className="w-full">
-        <FavouriteDestination />
+        <div className="relative w-[90%] md:w-[90%] xl:w-[85%] mt-20 py-10 mx-auto">
+          {/* World Map Background */}
+          <div className="absolute inset-0">
+            <div
+              className="w-full h-full opacity-10 bg-no-repeat bg-contain bg-right"
+              style={{ backgroundImage: `url(${world_map.src})` }}
+            ></div>
+          </div>
+
+          {/* Content on Top */}
+          <div className="relative z-10">
+            <div className="block md:flex justify-between">
+              {/* Text Section */}
+              <div className="px-2 sm:px-0">
+                <h3 className="text-blue-700 uppercase font-regular text-md">
+                  Explore Your Dream Destination
+                </h3>
+                <div className="mt-4 flex gap-5">
+                  {/* White Line */}
+                  <div className="w-[0.3rem] bg-blue-600"></div>
+                  <div className="w-full">
+                    <h2 className="text-[2.2rem] lg:text-[2.6rem] font-light">
+                      Find the Perfect Country
+                    </h2>
+                    <h2 className="font-black text-gray-800 lg:leading-none text-[2rem] lg:text-[2.6rem]">
+                      for Your Next Journey
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Country Cards */}
+
+            <CountriesCarousel />
+          </div>
+        </div>
       </section>
 
       {/* Testimonials */}
@@ -509,7 +546,6 @@ export default function HomePage() {
                   <div
                     style={{
                       background: `url(${student_with_books.src}) no-repeat center center/cover`,
-                     
                     }}
                     className="h-[15rem] sm:h-[10rem] w-full sm:w-[10rem]  cursor-pointer "
                   ></div>

@@ -5,10 +5,12 @@ import forex_stock from "@public/assets/images/AboutPage/forex_stock.jpg";
 import smiley_students_library from "@public/assets/images/AboutPage/smiley_students_library.jpg";
 import students_holding_map from "@public/assets/images/AboutPage/students_holding_map.jpg";
 import woman_working_travel from "@public/assets/images/AboutPage/women_working_travel.jpg";
-
+import gaurav_garg from "@public/assets/images/AboutPage/gaurav_garg.png";
+import ceo2 from "@public/assets/images/AboutPage/ceo2.png";
 import { FaAward, FaThumbsUp } from "react-icons/fa";
 
 const page = () => {
+
   return (
     <>
       <section
@@ -44,7 +46,7 @@ const page = () => {
       </section>
 
       {/* what we are or who we are */}
-      <section className="mt-20 py-10">
+      <section className="mt-10 py-10">
         <div className="flex flex-col-reverse lg:flex-row justify-center px-0 lg:px-4 xl:px-0">
           {/* Left div */}
           <div className="mt-10 lg:mt-0 ml-0 mr-5 lg:ml-14 w-full lg:w-[50%] flex items-center justify-center">
@@ -154,6 +156,66 @@ const page = () => {
           </div>
         </div>
       </section>
+
+      {/* ceo section */}
+      {/* <section>
+  <div className="flex items-start justify-around mt-20 w-[90%] md:w-[90%] xl:w-[85%] mx-auto gap-20">
+  <div className="w-1/3">
+      <img src={gaurav_garg.src} className="h-[25rem]" />
+    </div>
+    <div className="w-2/3 flex flex-col  ">
+    <div className="px-2 sm:px-0 w-full ">
+              <div className="mt-4 flex gap-5 ">
+
+                <div className="w-[0.3rem] bg-blue-600"></div>
+                <div className="w-full lg:w-[80%]">
+                  <h2 className="text-[2.2rem] lg:text-[2.6rem] font-light">
+                  Empowering Global Education
+                  </h2>
+                  <h2 className="font-black text-gray-800 lg:leading-none text-[2.2rem] lg:text-[2.6rem]">
+                  for a Brighter Tomorrow.
+                  </h2>
+                </div>
+              </div>
+            </div>
+              <p className="text-sm text-gray-800  text-justify w-[75%] mt-8">
+              At Abroad Educares, we take immense pride in being a trusted partner for educational institutions, helping shape the future of global academic success. With a robust track record of providing expert support in Visa Assistance, GIC, and Financial Services, we ensure a smooth and efficient journey for students aspiring to study abroad.
+              </p>
+              <p className="text-sm text-gray-800  w-[75%] text-justify py-5">
+              As a leader in the industry, we go beyond conventional services, fostering strong collaborations with institutions and schools to unlock new opportunities for students worldwide. Our unwavering dedication to excellence drives our mission to break down barriers, opening doors to brighter, global futures for the leaders of tomorrow.
+              </p>
+              <p className="text-sm text-gray-800  w-[75%] text-justify">
+              With your continued trust, Abroad Educares will remain a dynamic force in the international education sector, paving the way for transformative academic journeys.
+              </p>
+    </div>
+  
+  </div>
+</section> */}
+
+      {/* ceo section */}
+      <section className="mt-20 px-10 ">
+  <div className="grid grid-cols-10 mx-auto h-[42rem] relative">
+    <div className="col-span-3 relative">
+      <div className="flex items-center justify-center h-[42rem] relative">
+
+      <div className="bg-white h-[20rem] px-10 absolute ">
+ 
+    <h2 className="text-[2.2rem] lg:text-[2.6rem] font-light text-center">
+                  Empowering Global Education for a Brighter Tomorrow.
+                  </h2>
+      </div>
+      </div>
+    </div>
+    <div
+      className="col-span-4 bg-cover bg-top grayscale contrast-100"
+      style={{
+        backgroundImage: `url(${ceo2.src})`,
+        
+      }}
+    ></div>
+    <div className="col-span-3"></div>
+  </div>
+</section>
     </>
   );
 };

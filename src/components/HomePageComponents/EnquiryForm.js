@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaPhoneAlt,FaBook  } from 'react-icons/fa';
-
-function EnquiryForm({MainForm,setMainForm}) {
-  const [formValues, setFormValues] = useState({
-    name: '',
-    email: '',
-    number: '',
-    subject: '',
-  });
-
+import { FaUser, FaEnvelope, FaPhoneAlt, FaBook } from 'react-icons/fa';
+import { useContext } from 'react';
+import { UserContext } from '@/context/UserContext';
+function EnquiryForm() {
+ 
+const {MainForm,setMainForm}=useContext(UserContext);
   const [focusedField, setFocusedField] = useState('');
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormValues((prevValues) => ({
+    setMainForm((prevValues) => ({
       ...prevValues,
       [id]: value,
     }));
-    
   };
 
   const handleFocus = (e) => {
@@ -30,24 +25,30 @@ function EnquiryForm({MainForm,setMainForm}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formValues);
-    // Handle form submission here
-    setMainForm((prevVal) => ({ ...prevVal, formValues }));
-    console.log(MainForm);
+    console.log('Form Submitted:', MainForm);
+    setMainForm((prevVal) => ({ ...prevVal, MainForm }));
+    // console.log('Main form is==>', MainForm);
+    setMainForm({
+      name: '',
+      email: '',
+      number: '',
+      subject: '',
+    })
+
   };
 
   return (
     <div className="w-[90%] sm:w-[80%] max-w-lg mx-auto">
-    
       <form
-        className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 border  border-gray-300"
+        className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 border border-gray-300"
         onSubmit={handleSubmit}
       >
-        <div className='pt-4 pb-8'>
-
-      <h2 className="text-2xl font-bold text-start ">Enquiry Now</h2>
-        <div className='w-8 h-1 rounder-full bg-blue-600'></div>
+        <div className="pt-4 pb-8">
+          <h2 className="text-2xl font-bold text-start">Enquiry Now</h2>
+          <div className="w-8 h-1 rounder-full bg-blue-600"></div>
         </div>
+
+        {/* Name Input */}
         <div
           className={`mb-8 flex items-center border rounded ${
             focusedField === 'name' ? 'border-blue-500' : 'border-gray-300'
@@ -61,12 +62,14 @@ function EnquiryForm({MainForm,setMainForm}) {
             id="name"
             type="text"
             placeholder="Enter your name"
-            value={formValues.name}
+            value={MainForm.name}
             onChange={handleChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
           />
         </div>
+
+        {/* Email Input */}
         <div
           className={`mb-8 flex items-center border rounded ${
             focusedField === 'email' ? 'border-blue-500' : 'border-gray-300'
@@ -80,12 +83,14 @@ function EnquiryForm({MainForm,setMainForm}) {
             id="email"
             type="email"
             placeholder="Enter your email"
-            value={formValues.email}
+            value={MainForm.email}
             onChange={handleChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
           />
         </div>
+
+        {/* Number Input */}
         <div
           className={`mb-8 flex items-center border rounded ${
             focusedField === 'number' ? 'border-blue-500' : 'border-gray-300'
@@ -99,34 +104,37 @@ function EnquiryForm({MainForm,setMainForm}) {
             id="number"
             type="tel"
             placeholder="Enter your number"
-            value={formValues.number}
+            value={MainForm.number}
             onChange={handleChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
           />
         </div>
+
+        {/* Subject Input (Previously 'state') */}
         <div
           className={`mb-8 flex items-center border rounded ${
-            focusedField === 'state' ? 'border-blue-500' : 'border-gray-300'
+            focusedField === 'subject' ? 'border-blue-500' : 'border-gray-300'
           }`}
         >
-          <FaBook 
-            className={`text-gray-500 mr-2 ml-2 ${focusedField === 'state' ? 'text-blue-500' : ''}`}
+          <FaBook
+            className={`text-gray-500 mr-2 ml-2 ${focusedField === 'subject' ? 'text-blue-500' : ''}`}
           />
           <input
             className="appearance-none border-none w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none"
-            id="state"
+            id="subject"
             type="text"
             placeholder="Enter your subject"
-            value={formValues.state}
+            value={MainForm.subject} // Updated to MainForm.subject
             onChange={handleChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
           />
         </div>
+
         <div className="flex items-center justify-between">
           <button
-            className="bg-blue-600 hover:bg-blue-700 transiton-all duration-300 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
+            className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Submit

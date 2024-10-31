@@ -91,11 +91,7 @@ const FavouriteDestination = () => {
           ))}
         </div>
 
-        {/* Footer Text */}
-        <p className="text-center">
-          Would you like to speak to one of our consultants over the phone?{" "}
-          <span className="font-bold">Explore All Countries.</span>
-        </p>
+        
       </div>
     </div>
   );
