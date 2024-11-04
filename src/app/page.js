@@ -1,6 +1,5 @@
 "use client";
 import { useContext, useState, useEffect } from "react";
-import { UserContext } from "../context/UserContext";
 import EnquiryForm from "@/components/HomePageComponents/EnquiryForm";
 import HeroImg from "@public/assets/images/HomePage/HeroImg.jpg";
 import Button from "@/components/Button";
@@ -12,13 +11,7 @@ import { FaAward, FaThumbsUp } from "react-icons/fa";
 import VisaServiceCard from "@/components/HomePageComponents/VisaServiceCard";
 import ChooseYourVisa from "@/components/HomePageComponents/ChooseYourVisa";
 import CountriesCarousel from "@/components/ServicesComponent/CountriesCarousel";
-import FavouriteDestination from "@/components/HomePageComponents/FavouriteDestination";
 import testimonial_img from "@public/assets/images/HomePage/testimonial_img.jpg";
-// import Pragat from "@public/assets/images/HomePage/Pragat.jpg";
-// import Sumandeep from "@public/assets/images/HomePage/Sumandeep.jpg";
-// import Chetan from "@public/assets/images/HomePage/Chetan.jpg";
-// import Himanshu from "@public/assets/images/HomePage/Himanshu.jpg";
-// import MananGarg from "@public/assets/images/HomePage/MananGarg.jpg";
 import TestimonialCarousel from "@/components/HomePageComponents/TestimonialCarousel";
 import american_passport from "@public/assets/images/HomePage/american_passport.jpg";
 import women_in_library from "@public/assets/images/HomePage/women_in_library.jpg";
@@ -27,8 +20,9 @@ import student_with_books from "@public/assets/images/HomePage/student_with_book
 import Man_in_BlueJeans from "@public/assets/images/HomePage/Man_in_BlueJeans.jpg";
 import TopView_of_document from "@public/assets/images/HomePage/TopView_of_document.jpg";
 import world_map from "@public/assets/images/HomePage/world_map.png";
+
 export default function HomePage() {
-  const { user, setUser } = useContext(UserContext);
+
   const [Experience, setExperience] = useState(0);
   const [Projects, setProjects] = useState(0);
 

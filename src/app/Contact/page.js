@@ -1,14 +1,26 @@
-"use Client"
-import React,{ useContext } from "react";
+'use client'
+import React, { useContext } from "react";
 import call_operator from "@public/assets/images/ContactPage/call_operator.jpg";
 import Link from "next/link";
 import { FaLocationDot, FaBriefcase } from "react-icons/fa6";
 import { MdEmail, MdCall } from "react-icons/md";
-// import { UserContext } from '@/context/UserContext';
+import { UserContext } from '../../app/context/UserContext';
 const Contact = () => {
-    
-  // const {MainForm,setMainForm}=useContext(UserContext);
+  const {MainForm,setMainForm,handleSubmit,errors,setErrors}=useContext(UserContext);
+  console.log("i m in the contact page",MainForm)
 
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setMainForm((prevValues) => ({
+      ...prevValues,
+      [id]: value,
+    }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [id]: '',
+    }));
+  };
+  
   return (
     <>
       {/* Hero section of the contact page */}
@@ -134,15 +146,14 @@ const Contact = () => {
             ></iframe>
           </div>
           <div className="lg:w-[50%] w-full shadow-md h-[max-content] p-12">
-            <form>
+          <form onSubmit={handleSubmit}>
               <div className="px-2 sm:px-0 w-full">
                 <h3 className="text-blue-700 uppercase font-regular text-md">
                   Message us
                 </h3>
                 <div className="my-6 flex gap-5">
-                  {/* White line */}
                   <div className="w-[0.3rem] bg-blue-600"></div>
-                  <div className="w-full block md:flex items-center ">
+                  <div className="w-full block md:flex items-center">
                     <h2 className="text-[2.2rem] lg:text-[2.6rem] font-light">
                       Send A
                     </h2>
@@ -161,35 +172,68 @@ const Contact = () => {
               <div>
                 <input
                   type="text"
+                  id="name"
                   placeholder="Name"
-                  className="w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none"
+                  value={MainForm.name}
+                  onChange={handleChange}
+                  className={`w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none ${
+                    errors.name ? 'border-red-500' : ''
+                  }`}
                 />
+                {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
               </div>
               <div className="flex gap-5">
                 <input
                   type="email"
+                  id="email"
                   placeholder="Email"
-                  className="w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none"
+                  value={MainForm.email}
+                  onChange={handleChange}
+                  className={`w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none ${
+                    errors.email ? 'border-red-500' : ''
+                  }`}
                 />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                 <input
-                  type="tele"
+                  type="tel"
+                  id="number"
                   placeholder="Contact No."
-                  className="w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none"
+                  value={MainForm.number}
+                  onChange={handleChange}
+                  className={`w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none ${
+                    errors.number ? 'border-red-500' : ''
+                  }`}
                 />
+                {errors.number && <p className="text-red-500 text-sm">{errors.number}</p>}
               </div>
               <input
                 type="text"
+                id="subject"
                 placeholder="Subject"
-                className="w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none"
+                value={MainForm.subject}
+                onChange={handleChange}
+                className={`w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none ${
+                  errors.subject ? 'border-red-500' : ''
+                }`}
               />
+              {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
 
               <textarea
+                id="comments"
                 placeholder="Comments"
-                className="w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none"
+                value={MainForm.comments}
+                onChange={handleChange}
+                className={`w-full border-[0.1px] border-gray-400 p-3 mb-5 placeholder-opacity-70 focus:border-blue-700 focus:outline-none ${
+                  errors.comments ? 'border-red-500' : ''
+                }`}
                 rows={5}
               />
+              {errors.comments && <p className="text-red-500 text-sm">{errors.comments}</p>}
 
-              <button className="bg-blue-700 text-white py-3 w-full uppercase border-[0.5px] hover:bg-white  hover:border-blue-700  hover:text-blue-700 transition-all duration-300" type="submit" >
+              <button
+                className="bg-blue-700 text-white py-3 w-full uppercase border-[0.5px] hover:bg-white  hover:border-blue-700  hover:text-blue-700 transition-all duration-300"
+                type="submit"
+              >
                 Send Message
               </button>
             </form>
