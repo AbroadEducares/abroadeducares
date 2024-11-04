@@ -8,7 +8,8 @@ import woman_working_travel from "@public/assets/images/AboutPage/women_working_
 import gaurav_garg from "@public/assets/images/AboutPage/gaurav_garg.png";
 import ceo2 from "@public/assets/images/AboutPage/ceo2.png";
 import { FaAward, FaThumbsUp } from "react-icons/fa";
-
+import { FaFacebookSquare,FaLinkedin,FaInstagramSquare  } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 const page = () => {
 
   return (
@@ -44,6 +45,8 @@ const page = () => {
           </nav>
         </div>
       </section>
+
+
 
       {/* what we are or who we are */}
       <section className="mt-10 py-10">
@@ -193,15 +196,15 @@ const page = () => {
 </section> */}
 
       {/* ceo section */}
-      <section className="mt-20 px-10 ">
-  <div className="grid grid-cols-10 mx-auto h-[42rem] relative">
-    <div className="col-span-3 relative">
+ <section className=" ">
+  <div className="lg:grid lg:grid-cols-10 mx-auto h-[42rem] relative">
+    <div className="col-span-3 relative bg-white">
       <div className="flex items-center justify-center h-[42rem] relative">
 
-      <div className="bg-white h-[20rem] px-10 absolute ">
+      <div className="bg-gray-800 h-[30rem] px-5 absolute right-[-50px] z-10 ml-[75px] items-center justify-center flex shadow-lg">
  
-    <h2 className="text-[2.2rem] lg:text-[2.6rem] font-light text-center">
-                  Empowering Global Education for a Brighter Tomorrow.
+    <h2 className="text-[2.2rem] lg:text-[2.6rem] font-light text-center text-white">
+                  Empowering Global Education for a <span className="font-bold">Brighter Tomorrow.</span>
                   </h2>
       </div>
       </div>
@@ -213,7 +216,38 @@ const page = () => {
         
       }}
     ></div>
-    <div className="col-span-3"></div>
+    <div className="col-span-3 flex flex-col justify-around items-end  bg-gray-800 px-10">
+    <div className="sm:px-0 w-full pl-10">
+              <h3 className="text-white uppercase font-regular text-md">
+               CEO & Founder
+              </h3>
+              <div className="mt-4 flex gap-5">
+                {/* White line */}
+                <div className="w-[0.3rem] bg-blue-600"></div>
+                <div className="w-full lg:w-[80%]">
+                  <h2 className="font-black text-white lg:leading-none text-[2.2rem] lg:text-[2.6rem]">
+                    Gaurav Garg
+                  </h2>
+                </div>
+              </div>
+              <p className="text-sm text-white text-justify mt-10">
+   "At Abroad Educares, we’re proud to support students’ aspirations to study abroad with expert Visa Assistance, GIC, and Financial Services. As industry leaders, we partner with institutions to create global opportunities and break down barriers in education. With your trust, we’ll continue paving the way for transformative academic journeys worldwide."
+              </p>
+            </div>
+   <div className="flex items-center gap-4">
+    <p className="text-white text-sm">Let's Connect!</p>
+    <div className="flex items-center">
+    <div className="w-20 bg-white h-[0.5px]"></div>
+    <IoIosArrowForward color="white"/>
+    </div>
+    <div className="flex items-center gap-2">
+      <FaFacebookSquare size="20" className="hover:text-blue-600 text-white transition-all duration-300 cursor-pointer"/>
+      <FaLinkedin size="20" className="hover:text-blue-600 text-white  transition-all duration-300  cursor-pointer"/>
+      <FaInstagramSquare size="20" className="hover:text-blue-600 text-white  transition-all duration-300  cursor-pointer"/>
+    </div>
+    </div>
+    </div>
+
   </div>
 </section>
     </>

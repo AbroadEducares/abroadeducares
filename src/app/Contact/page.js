@@ -4,10 +4,10 @@ import call_operator from "@public/assets/images/ContactPage/call_operator.jpg";
 import Link from "next/link";
 import { FaLocationDot, FaBriefcase } from "react-icons/fa6";
 import { MdEmail, MdCall } from "react-icons/md";
-import { UserContext } from '@/context/UserContext';
+// import { UserContext } from '@/context/UserContext';
 const Contact = () => {
     
-  const {MainForm,setMainForm}=useContext(UserContext);
+  // const {MainForm,setMainForm}=useContext(UserContext);
 
   return (
     <>
@@ -189,7 +189,7 @@ const Contact = () => {
                 rows={5}
               />
 
-              <button className="bg-blue-700 text-white py-3 w-full uppercase border-[0.5px] hover:bg-white  hover:border-blue-700  hover:text-blue-700 transition-all duration-300" type="submi" onClick={()=>console.log(MainForm)}>
+              <button className="bg-blue-700 text-white py-3 w-full uppercase border-[0.5px] hover:bg-white  hover:border-blue-700  hover:text-blue-700 transition-all duration-300" type="submit" >
                 Send Message
               </button>
             </form>
