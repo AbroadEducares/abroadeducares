@@ -1,17 +1,21 @@
 const express = require('express');
-const app=express();
-const cors=require('cors');
-const {dbconnect}=require('./config/database');
+const cors = require('cors');
+const { dbconnect } = require('./config/database');
 
+const app = express();
 app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 dbconnect();
 
-const user = require('./routes/user');
-app.use('/api/v1',user);
+const userRoutes = require('./routes/user'); 
+const newsletterRoutes = require('./routes/NewsLetter'); // Use lowercase to stay consistent
+const agentRoutes = require('./routes/agent'); // Import the agent route
 
-app.listen(PORT,()=>{
+app.use('/api/v1', userRoutes);
+app.use('/api/v1', newsletterRoutes); // Consistently named route import
+app.use('/api/v1', agentRoutes); 
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-})
+});

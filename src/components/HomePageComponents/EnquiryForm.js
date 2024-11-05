@@ -95,31 +95,31 @@ function EnquiryForm() {
           )}
         </div>
 
-        {/* Number Input */}
+        {/* phone Input */}
         <div className="mb-8">
           <div
             className={`flex items-center border rounded ${
-              focusedField === "number" ? "border-blue-500" : "border-gray-300"
+              focusedField === "phone" ? "border-blue-500" : "border-gray-300"
             }`}
           >
             <FaPhoneAlt
               className={`text-gray-500 mr-2 ml-2 ${
-                focusedField === "number" ? "text-blue-500" : ""
+                focusedField === "phone" ? "text-blue-500" : ""
               }`}
             />
             <input
               className="appearance-none border-none w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none"
-              id="number"
+              id="phone"
               type="tel"
-              placeholder="Enter your number"
-              value={MainForm.number}
+              placeholder="Enter your phone"
+              value={MainForm.phone}
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
             />
           </div>
-          {errors.number && (
-            <p className="text-red-500 text-sm mt-1">{errors.number}</p>
+          {errors.phone && (
+            <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
           )}
         </div>
 

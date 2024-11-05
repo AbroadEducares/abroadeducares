@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
 
-const EnquiryFormSchema = new mongoose.Schema({
+const AgentFormSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
+    },
+    agencyname: {
+        type: String,
     },
     email: {
         type: String,
@@ -13,7 +16,15 @@ const EnquiryFormSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    subject: {
+    city: {
+        type: String,
+        required: true,
+    },
+    state: {
+        type: String,
+        required: true,
+    },
+    services:{
         type: String,
         required: true,
     },
@@ -24,6 +35,6 @@ const EnquiryFormSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
-});
+})
 
-module.exports = mongoose.model("EnquiryForm", EnquiryFormSchema);
+module.exports = mongoose.model("Agent", AgentFormSchema);

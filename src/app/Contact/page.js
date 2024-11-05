@@ -95,7 +95,7 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* contact number */}
+            {/* contact phone */}
             <div className="group flex flex-col items-center justify-center border-[0.1px] border-blue-700 py-12 px-6 hover:border-blue-700 hover:bg-blue-700 transition-all duration-300">
               <MdCall
                 size={45}
@@ -197,13 +197,13 @@ const Contact = () => {
                 <div className="w-[50%]">
                   <input
                     type="tel"
-                    id="number"
+                    id="phone"
                     placeholder="Contact No."
-                    value={MainForm.number}
+                    value={MainForm.phone}
                     onChange={handleChange}
-                    className={inputClassName(errors.number)}
+                    className={inputClassName(errors.phone)}
                   />
-                  {errors.number && <p className="text-red-500 text-sm mb-5">{errors.number}</p>}
+                  {errors.phone && <p className="text-red-500 text-sm mb-5">{errors.phone}</p>}
                 </div>
               </div>
 

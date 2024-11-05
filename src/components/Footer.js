@@ -1,10 +1,24 @@
-import React from "react";
+"use client"
+import React,{useContext} from "react";
 import whiteLogo from "@public/whiteLogo.png";
 import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import world_map from "@public/assets/images/HomePage/world_map.png";
 import Button from "@/components/Button";
 import Link from "next/link";
+import { UserContext } from '../app/context/UserContext';
+import toast, { Toaster } from "react-hot-toast";
+
 const Footer = () => {
+  const {newsletterErrors,handleSubmitNewsletter,setNewsletterForm,NewsletterForm,setNewsletterErrors}=useContext(UserContext);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewsletterForm((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
+    setNewsletterErrors((prevErrors) => ({ ...prevErrors, [name]: "" })); // Clear error on change
+  };
+
   return (
     <footer className="">
       {/* Footer Top */}
@@ -136,7 +150,7 @@ const Footer = () => {
               </ul>
             </nav>
 
-            <form className="w-full md:w-auto">
+            <form className="w-full md:w-auto"   onSubmit={handleSubmitNewsletter}>
               <h6 className="font-bold text-xl">Subscribe to Our Newsletter</h6>
               <fieldset>
                 <p className="text-sm font-normal my-4">
@@ -147,14 +161,22 @@ const Footer = () => {
                 <div className="flex">
                   <input
                     type="text"
+                    name="email"
                     placeholder="Your Email"
                     className="flex-1 mr-2 p-2 text-gray-800 text-sm border-none outline-none placeholder:text-sm placeholder:font-normal placeholder:opacity-70"
+                    value={NewsletterForm.name}
+                    onChange={handleChange}
+                  
                   />
-                  <button className="p-2 px-5 bg-blue-700 hover:bg-blue-800 text-white font-bold text-2xl">
+                  <button className="p-2 px-5 bg-blue-700 hover:bg-blue-800 text-white font-bold text-2xl" type="submit">
                     {">"}
                   </button>
                 </div>
+                {newsletterErrors.email && (
+            <p className="text-red-500 text-sm mt-1">{newsletterErrors.email}</p>
+          )}
               </fieldset>
+              <Toaster />
             </form>
           </div>
         </div>

@@ -1,5 +1,7 @@
-const express=require('express');
+const express = require('express');
 const router = express.Router();
+const { EnquiryForm } = require('../controllers/EnquiryForm');
 
-const {EnquiryForm}=require('../controllers/user');
-router.post('/EnquiryForm',EnquiryForm)
+router.post('/EnquiryForm', EnquiryForm); // Consistent naming
+
+module.exports = router;
