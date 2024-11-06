@@ -1,5 +1,5 @@
 "use client";
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import EnquiryForm from "@/components/HomePageComponents/EnquiryForm";
 import HeroImg from "@public/assets/images/HomePage/HeroImg.jpg";
 import Button from "@/components/Button";
@@ -66,21 +66,20 @@ export default function HomePage() {
               {/* white line */}
               <div className="w-[0.3rem]  bg-white"></div>
               <div className="w-full lg:w-[80%]">
-                <h1 className="leading-[4rem] lg:leading-none  text-[2.2rem] sm:text-[3.4rem] lg:text-7xl font-extralight">
-                  A Global Exposure Consultancy for Students{" "}
-                  <span className="font-bold">Schools and Colleges.</span>
+                <h1 className="leading-[4rem] lg:leading-none  text-[2.2rem] sm:text-[3.4rem] lg:text-[4rem] font-extralight">
+                Join the Global Education Fair:{" "}
+                  <span className="font-bold">Your Pathway to World-Class Education!</span>
                 </h1>
               </div>
             </div>
             <p className="py-8 w-[70%]">
-              Our forte lies in providing proper guidance and step-by-step
-              method following to our clients for a seamless global journey.
+            Discover top international educational opportunities at our Global Education Fair. Connect with experts, explore study abroad options, and gain valuable insights to make informed choices for your global education journey.
             </p>
-            <Button
+            {/* <Button
               text="discover more"
               borderColor="border-white"
               textColor="text-white"
-            />
+            /> */}
           </div>
           <div className="w-full  lg:w-1/2 mt-8  lg:mt-0">
             {/* Enquiry form */}
@@ -473,7 +472,7 @@ export default function HomePage() {
                 with the latest changes, thus improving the management of
                 applications.
               </p>
-              <Button text="Contact Us" textColor="text-white" />
+              <Button text="Contact Us" textColor="text-white" href="/Contact#contactForm"/>
             </div>
           </div>
           <div className="lg:block hidden"></div>

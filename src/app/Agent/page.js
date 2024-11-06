@@ -1,8 +1,7 @@
 "use client"
-import React, { useState,useContext } from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
 import handshake from '@public/assets/images/AgentPage/handshake.jpg';
-import { FaPassport, FaGlobe } from 'react-icons/fa';
 import GetStartedImage from '@public/assets/images/AgentPage/GetStartedImage.jpg';
 import { UserContext } from '../../app/context/UserContext';
 

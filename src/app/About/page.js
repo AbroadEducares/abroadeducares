@@ -5,13 +5,15 @@ import forex_stock from "@public/assets/images/AboutPage/forex_stock.jpg";
 import smiley_students_library from "@public/assets/images/AboutPage/smiley_students_library.jpg";
 import students_holding_map from "@public/assets/images/AboutPage/students_holding_map.jpg";
 import woman_working_travel from "@public/assets/images/AboutPage/women_working_travel.jpg";
-import gaurav_garg from "@public/assets/images/AboutPage/gaurav_garg.png";
 import ceo2 from "@public/assets/images/AboutPage/ceo2.png";
 import { FaAward, FaThumbsUp } from "react-icons/fa";
-import { FaFacebookSquare,FaLinkedin,FaInstagramSquare  } from "react-icons/fa";
+import {
+  FaFacebookSquare,
+  FaLinkedin,
+  FaInstagramSquare,
+} from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 const page = () => {
-
   return (
     <>
       <section
@@ -45,8 +47,6 @@ const page = () => {
           </nav>
         </div>
       </section>
-
-
 
       {/* what we are or who we are */}
       <section className="mt-10 py-10">
@@ -161,95 +161,83 @@ const page = () => {
       </section>
 
       {/* ceo section */}
-      {/* <section>
-  <div className="flex items-start justify-around mt-20 w-[90%] md:w-[90%] xl:w-[85%] mx-auto gap-20">
-  <div className="w-1/3">
-      <img src={gaurav_garg.src} className="h-[25rem]" />
-    </div>
-    <div className="w-2/3 flex flex-col  ">
-    <div className="px-2 sm:px-0 w-full ">
-              <div className="mt-4 flex gap-5 ">
+      <section className="px-4 lg:px-0">
+      <div className="lg:grid lg:grid-cols-10 mx-auto h-auto lg:h-[42rem] relative">
+        {/* Left text box */}
+        <div className="col-span-3 bg-white">
+          <div className="flex items-center justify-center lg:h-[42rem] h-[20rem] relative">
+            <div className="bg-gray-800 w-full sm:w-[70%] lg:w-auto h-[15rem] sm:h-[20rem] lg:h-[30rem] px-5 absolute lg:right-[-50px] z-10 items-center justify-center flex shadow-lg">
+              <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[2.6rem] font-light text-center text-white">
+                Empowering Global Education for a{" "}
+                <span className="font-bold">Brighter Tomorrow.</span>
+              </h2>
+            </div>
+          </div>
+        </div>
 
-                <div className="w-[0.3rem] bg-blue-600"></div>
-                <div className="w-full lg:w-[80%]">
-                  <h2 className="text-[2.2rem] lg:text-[2.6rem] font-light">
-                  Empowering Global Education
-                  </h2>
-                  <h2 className="font-black text-gray-800 lg:leading-none text-[2.2rem] lg:text-[2.6rem]">
-                  for a Brighter Tomorrow.
-                  </h2>
-                </div>
+        {/* Center background image */}
+        <div
+          className="col-span-4 bg-cover bg-top lg:bg-top grayscale contrast-100 h-[15rem] sm:h-[25rem] lg:h-auto"
+          style={{
+            backgroundImage: `url(${ceo2.src})`,
+          }}
+        ></div>
+
+        {/* Right text and links */}
+        <div className="col-span-3 flex flex-col justify-around items-end bg-gray-800 px-5 sm:px-10 py-8 lg:py-0">
+          <div className="sm:px-0 w-full sm:pl-10">
+            <h3 className="text-white uppercase font-regular text-md">
+              CEO & Founder
+            </h3>
+            <div className="mt-4 flex gap-5">
+              <div className="w-[0.3rem] bg-blue-600"></div>
+              <div className="w-full ">
+                <h2 className="font-black text-white lg:leading-none text-[1.8rem] sm:text-[2.2rem] lg:text-[2.6rem]">
+                  Gaurav Garg
+                </h2>
               </div>
             </div>
-              <p className="text-sm text-gray-800  text-justify w-[75%] mt-8">
-              At Abroad Educares, we take immense pride in being a trusted partner for educational institutions, helping shape the future of global academic success. With a robust track record of providing expert support in Visa Assistance, GIC, and Financial Services, we ensure a smooth and efficient journey for students aspiring to study abroad.
-              </p>
-              <p className="text-sm text-gray-800  w-[75%] text-justify py-5">
-              As a leader in the industry, we go beyond conventional services, fostering strong collaborations with institutions and schools to unlock new opportunities for students worldwide. Our unwavering dedication to excellence drives our mission to break down barriers, opening doors to brighter, global futures for the leaders of tomorrow.
-              </p>
-              <p className="text-sm text-gray-800  w-[75%] text-justify">
-              With your continued trust, Abroad Educares will remain a dynamic force in the international education sector, paving the way for transformative academic journeys.
-              </p>
-    </div>
-  
-  </div>
-</section> */}
+            <p className="text-sm text-white text-justify mt-6 lg:mt-10">
+              "At Abroad Educares, we’re proud to support students’ aspirations
+              to study abroad with expert Visa Assistance, GIC, and Financial
+              Services. As industry leaders, we partner with institutions to
+              create global opportunities and break down barriers in education.
+              With your trust, we’ll continue paving the way for transformative
+              academic journeys worldwide."
+            </p>
+          </div>
 
-      {/* ceo section */}
- <section className=" ">
-  <div className="lg:grid lg:grid-cols-10 mx-auto h-[42rem] relative">
-    <div className="col-span-3 relative bg-white">
-      <div className="flex items-center justify-center h-[42rem] relative">
-
-      <div className="bg-gray-800 h-[30rem] px-5 absolute right-[-50px] z-10 ml-[75px] items-center justify-center flex shadow-lg">
- 
-    <h2 className="text-[2.2rem] lg:text-[2.6rem] font-light text-center text-white">
-                  Empowering Global Education for a <span className="font-bold">Brighter Tomorrow.</span>
-                  </h2>
-      </div>
-      </div>
-    </div>
-    <div
-      className="col-span-4 bg-cover bg-top grayscale contrast-100"
-      style={{
-        backgroundImage: `url(${ceo2.src})`,
-        
-      }}
-    ></div>
-    <div className="col-span-3 flex flex-col justify-around items-end  bg-gray-800 px-10">
-    <div className="sm:px-0 w-full pl-10">
-              <h3 className="text-white uppercase font-regular text-md">
-               CEO & Founder
-              </h3>
-              <div className="mt-4 flex gap-5">
-                {/* White line */}
-                <div className="w-[0.3rem] bg-blue-600"></div>
-                <div className="w-full lg:w-[80%]">
-                  <h2 className="font-black text-white lg:leading-none text-[2.2rem] lg:text-[2.6rem]">
-                    Gaurav Garg
-                  </h2>
-                </div>
-              </div>
-              <p className="text-sm text-white text-justify mt-10">
-   "At Abroad Educares, we’re proud to support students’ aspirations to study abroad with expert Visa Assistance, GIC, and Financial Services. As industry leaders, we partner with institutions to create global opportunities and break down barriers in education. With your trust, we’ll continue paving the way for transformative academic journeys worldwide."
-              </p>
+          {/* Social links */}
+          <div className="flex  sm:flex-row items-start sm:items-center gap-4 mt-6 sm:mt-0">
+            <p className="text-white text-sm">Let's Connect!</p>
+            <div className="flex items-center">
+              <div className="w-10 sm:w-20 bg-white h-[0.5px]"></div>
+              <IoIosArrowForward color="white" />
             </div>
-   <div className="flex items-center gap-4">
-    <p className="text-white text-sm">Let's Connect!</p>
-    <div className="flex items-center">
-    <div className="w-20 bg-white h-[0.5px]"></div>
-    <IoIosArrowForward color="white"/>
-    </div>
-    <div className="flex items-center gap-2">
-      <FaFacebookSquare size="20" className="hover:text-blue-600 text-white transition-all duration-300 cursor-pointer"/>
-      <FaLinkedin size="20" className="hover:text-blue-600 text-white  transition-all duration-300  cursor-pointer"/>
-      <FaInstagramSquare size="20" className="hover:text-blue-600 text-white  transition-all duration-300  cursor-pointer"/>
-    </div>
-    </div>
-    </div>
-
-  </div>
-</section>
+            <div className="flex gap-2 mt-2 sm:mt-0">
+              <a href="https://www.facebook.com/gaurav.garg.1420" target="_blank">
+                <FaFacebookSquare
+                  size="20"
+                  className="hover:text-blue-600 text-white transition-all duration-300 cursor-pointer"
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/gaurav-garg-7332264a/" target="_blank">
+                <FaLinkedin
+                  size="20"
+                  className="hover:text-blue-600 text-white transition-all duration-300 cursor-pointer"
+                />
+              </a>
+              <a href="https://www.instagram.com/garry_garg" target="_blank">
+                <FaInstagramSquare
+                  size="20"
+                  className="hover:text-blue-600 text-white transition-all duration-300 cursor-pointer"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </>
   );
 };

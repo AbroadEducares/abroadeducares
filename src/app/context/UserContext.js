@@ -7,7 +7,7 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
 
-  const [MainForm, setMainForm] = useState({
+  const [ContactForm, setContactForm] = useState({
     name: '',
     email: '',
     phone: '',
@@ -22,6 +22,15 @@ export const UserProvider = ({ children }) => {
     comments: "",
   });
 
+  const [eduFair, setEduFair]= useState({
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+    city: '',
+    lastLevelOfStudy: ''
+  });
+
   const [agentformData, setagentformData] = useState({
     name: '',
     agencyname: '',
@@ -33,6 +42,7 @@ export const UserProvider = ({ children }) => {
     comments: ''
   });
 
+  const [eduFairErrors, setEduFairErrors] = useState({});
   const [agenterrors, setagenterrors] = useState({});
   const [NewsletterForm, setNewsletterForm] = useState({email:""});
   const [newsletterErrors, setNewsletterErrors] = useState({ email: "" });
@@ -52,23 +62,23 @@ export const UserProvider = ({ children }) => {
     
   
 
-    if (!namePattern.test(MainForm.name)) {
+    if (!namePattern.test(ContactForm.name)) {
       newErrors.name = "Please enter a valid name (letters and spaces only).";
       isValid = false;
     }
-    if (!emailPattern.test(MainForm.email)) {
+    if (!emailPattern.test(ContactForm.email)) {
       newErrors.email = "Please enter a valid email.";
       isValid = false;
     }
-    if (!phonePattern.test(MainForm.phone)) {
+    if (!phonePattern.test(ContactForm.phone)) {
       newErrors.phone = "Please enter a valid 10-digit contact phone.";
       isValid = false;
     }
-    if (!subjectPattern.test(MainForm.subject)) {
+    if (!subjectPattern.test(ContactForm.subject)) {
       newErrors.subject = "Please enter a subject.";
       isValid = false;
     
-      if (!MainForm.comments) {
+      if (!ContactForm.comments) {
         newErrors.comments = "Please enter your comments.";
         isValid = false;
       }
@@ -78,7 +88,7 @@ export const UserProvider = ({ children }) => {
 
     if (isValid) {
       try{
-        const response = await axios.post("http://localhost:4000/api/v1/EnquiryForm", MainForm);
+        const response = await axios.post("http://localhost:4000/api/v1/EnquiryForm", ContactForm);
         console.log(response);
         if(response.status === 200){
             toast.success("Form submitted successfully");
@@ -89,10 +99,10 @@ export const UserProvider = ({ children }) => {
             toast.error("Error submitting form",error);
             console.log(error);
         }
-      console.log("Form Submitted:", MainForm);
+      console.log("Form Submitted:", ContactForm);
 
       // Reset Form after successful submission
-      setMainForm({
+      setContactForm({
         name: "",
         email: "",
         phone: "",
@@ -102,6 +112,71 @@ export const UserProvider = ({ children }) => {
     }
   };
 
+const handleEduFiarSubmit = async (e) => {
+    e.preventDefault();
+    const namePattern = /^[A-Za-z\s]+$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^\d{10}$/; // 10-digit phone for phone
+    const addressPattern = /.+/; // Checks for non-empty input
+    const cityPattern = /^[A-Za-z\s]+$/;
+    const lastLevelOfStudyPattern = /.+/; // Checks for non-empty input
+
+    // Validate Form
+    let isValid = true;
+    const newEduFairErrors = { name: "", email: "", phone: "", address: "", city: "", lastLevelOfStudy: "" };
+    
+    if (!namePattern.test(eduFair.name)) {
+      newEduFairErrors.name = "Please enter a valid name (letters and spaces only).";
+      isValid = false;
+    }
+    if (!emailPattern.test(eduFair.email)) {
+      newEduFairErrors.email = "Please enter a valid email.";
+      isValid = false;
+    }
+    if (!phonePattern.test(eduFair.phone)) {
+      newEduFairErrors.phone = "Please enter a valid 10-digit contact phone.";
+      isValid = false;
+    }
+    if (!addressPattern.test(eduFair.address)) {
+      newEduFairErrors.address = "Please enter your address.";
+      isValid = false;
+    }
+    if (!cityPattern.test(eduFair.city)) {
+      newEduFairErrors.city = "Please enter your city.";
+      isValid = false;
+    }
+    if (!lastLevelOfStudyPattern.test(eduFair.lastLevelOfStudy)) {
+      newEduFairErrors.lastLevelOfStudy = "Please select your last level of study.";
+      isValid = false;
+    }
+
+    setEduFairErrors(newEduFairErrors);
+
+    if (isValid) {
+      try {
+        const response = await axios.post("http://localhost:4000/api/v1/EduFair", eduFair);
+        console.log(response);
+        if (response.status === 200) {
+          toast.success("Form submitted successfully");
+        }
+      }
+      catch (error) {
+        toast.error("Error submitting form", error);
+        console.log(error);
+      }
+      console.log("Form Submitted:", eduFair);
+
+      // Reset Form after successful submission
+      setEduFair({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        city: "",
+        lastLevelOfStudy: ""
+      });
+    }
+  };
   
   const handleSubmitAgent = async (e) => {
     e.preventDefault();
@@ -211,7 +286,7 @@ export const UserProvider = ({ children }) => {
   };
   
   return (
-    <UserContext.Provider value={{MainForm,setMainForm,handleSubmit,errors,setErrors,newsletterErrors,handleSubmitNewsletter,NewsletterForm,setNewsletterForm,setNewsletterErrors,agentformData,setagenterrors,agenterrors,setagentformData,handleSubmitAgent}}>
+    <UserContext.Provider value={{ContactForm,setContactForm,handleSubmit,errors,setErrors,newsletterErrors,handleSubmitNewsletter,NewsletterForm,setNewsletterForm,setNewsletterErrors,agentformData,setagenterrors,agenterrors,setagentformData,handleSubmitAgent,eduFairErrors,setEduFairErrors,eduFair,setEduFair,handleEduFiarSubmit}}>
       {children}
     </UserContext.Provider>
   );

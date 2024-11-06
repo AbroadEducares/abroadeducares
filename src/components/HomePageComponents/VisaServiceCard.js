@@ -26,7 +26,7 @@ const VisaServiceCard = () => {
             We can assist you regardless of your present location.We can assist you through phone or Skype thanks to our online consultation. Our customers can always count on us.
         </p>
 
-        <Button text="Contact Us" borderColor="border-blue-700" textColor="text-black"/>
+        <Button text="Contact Us" borderColor="border-blue-700" textColor="text-black" href="/Contact#contactForm"/>
           </div>
         </div>
         <div

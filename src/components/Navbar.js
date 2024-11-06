@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { MdOutlineAccessTimeFilled, MdEmail, MdLocationOn,MdMenuOpen, MdMenu,MdOutlineLocalPhone  } from "react-icons/md";
 import logo from '@public/blackLogo.png';
 import Link from 'next/link';
@@ -30,14 +30,14 @@ export default function Navbar() {
             </div>
           </address>
           <div className="space-x-4 hidden lg:flex items-center">
-            <Link href="#" aria-label="Facebook">
-              <FaFacebookF />
+            <Link href="https://www.facebook.com/abroadeducares" target="_blank" aria-label="Facebook">
+              <FaFacebookF className="hover:text-blue-700 cursor-pointer transition-all duration-300"/>
             </Link> 
-            <Link href="#" aria-label="Twitter">
-              <FaTwitter />
+            <Link href="https://www.linkedin.com/company/abroad-educares/" target="_blank" aria-label="linkdin">
+              <FaLinkedin className="hover:text-blue-700 cursor-pointer transition-all duration-300"/>
             </Link> 
-            <Link href="#" aria-label="Instagram">
-              <FaInstagram />
+            <Link href="https://www.instagram.com/officialabroadeducares" target="_blank" aria-label="Instagram">
+              <FaInstagram className="hover:text-blue-700 cursor-pointer transition-all duration-300"/>
             </Link> 
           </div>
         </div>

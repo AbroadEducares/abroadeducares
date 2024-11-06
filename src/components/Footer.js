@@ -6,7 +6,7 @@ import world_map from "@public/assets/images/HomePage/world_map.png";
 import Button from "@/components/Button";
 import Link from "next/link";
 import { UserContext } from '../app/context/UserContext';
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 const Footer = () => {
   const {newsletterErrors,handleSubmitNewsletter,setNewsletterForm,NewsletterForm,setNewsletterErrors}=useContext(UserContext);
@@ -46,7 +46,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="relative z-10 mt-5 lg:mt-0 lg:ml-auto">
-            <Button text="Contact Us" textColor="text-white" />
+            <Button text="Contact Us" textColor="text-white" href="/Contact#contactForm"/>
           </div>
         </div>
       </div>
@@ -69,14 +69,14 @@ const Footer = () => {
               transparency.
             </p>
             <div className="flex items-center justify-center gap-5 my-5">
-              <a>
-                <FaFacebookF />
+              <a href="https://www.facebook.com/abroadeducares" target="_blank">
+                <FaFacebookF className="hover:text-blue-700 cursor-pointer transition-all duration-300"/>
               </a>
-              <a>
-                <FaLinkedin />
+              <a href="https://www.linkedin.com/company/abroad-educares/" target="_blank">
+                <FaLinkedin className="hover:text-blue-700  cursor-pointer transition-all duration-300"/>
               </a>
-              <a>
-                <FaInstagram />
+              <a href="https://www.instagram.com/officialabroadeducares" target="_blank">
+                <FaInstagram className="hover:text-blue-700 cursor-pointer transition-all duration-300"/>
               </a>
             </div>
           </div>

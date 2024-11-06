@@ -5,16 +5,16 @@ import Link from "next/link";
 import { FaLocationDot, FaBriefcase } from "react-icons/fa6";
 import { MdEmail, MdCall } from "react-icons/md";
 import { UserContext } from '../../app/context/UserContext';
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 
 const Contact = () => {
-  const {MainForm,setMainForm,handleSubmit,errors,setErrors}=useContext(UserContext);
-  console.log("i m in the contact page",MainForm)
+  const {ContactForm,setContactForm,handleSubmit,errors,setErrors}=useContext(UserContext);
+  console.log("i m in the contact page",ContactForm)
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setMainForm((prevValues) => ({
+    setContactForm((prevValues) => ({
       ...prevValues,
       [id]: value,
     }));
@@ -141,7 +141,7 @@ const Contact = () => {
       </section>
 
       {/* Map */}
-      <section>
+      <section id="contactform">
         <div className="w-[90%] md:w-[90%] xl:w-[85%]  flex lg:flex-row flex-col-reverse items-center  mt-20 pt-10 mx-auto ">
           <div className="lg:w-[50%] w-full">
             <iframe
@@ -175,7 +175,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   placeholder="Name"
-                  value={MainForm.name}
+                  value={ContactForm.name}
                   onChange={handleChange}
                   className={inputClassName(errors.name)}
                 />
@@ -188,7 +188,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     placeholder="Email"
-                    value={MainForm.email}
+                    value={ContactForm.email}
                     onChange={handleChange}
                     className={inputClassName(errors.email)}
                   />
@@ -199,7 +199,7 @@ const Contact = () => {
                     type="tel"
                     id="phone"
                     placeholder="Contact No."
-                    value={MainForm.phone}
+                    value={ContactForm.phone}
                     onChange={handleChange}
                     className={inputClassName(errors.phone)}
                   />
@@ -211,7 +211,7 @@ const Contact = () => {
                 type="text"
                 id="subject"
                 placeholder="Subject"
-                value={MainForm.subject}
+                value={ContactForm.subject}
                 onChange={handleChange}
                 className={inputClassName(errors.subject)}
               />
@@ -220,7 +220,7 @@ const Contact = () => {
               <textarea
                 id="comments"
                 placeholder="Comments"
-                value={MainForm.comments}
+                value={ContactForm.comments}
                 onChange={handleChange}
                 className={inputClassName(errors.comments)}
                 rows={5}
