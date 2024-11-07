@@ -5,12 +5,13 @@ import { MdOutlineAccessTimeFilled, MdEmail, MdLocationOn,MdMenuOpen, MdMenu,MdO
 import logo from '@public/blackLogo.png';
 import Link from 'next/link';
 import Image from "next/image";
+
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <header >
+    <header className="sticky top-0 z-50 ">
       {/* Top Bar */}
-      <section className="bg-gray-800 hidden md:block px-0 md:px-2 lg:px-10 mx-auto lg:mx-0  py-1 text-white">
+      <section className="bg-gray-800 hidden md:block px-0 md:px-2 lg:px-10 mx-auto lg:mx-0  py-1 text-white b">
         <div className="w-[100%] flex justify-center lg:justify-between  items-center  py-2  px-0 ">
           <address className="not-italic text-sm font-light flex items-center space-x-4">
             <div className="flex items-center space-x-1">
@@ -45,15 +46,16 @@ export default function Navbar() {
       </section>
 
       {/* Main Navbar */}
-      <nav className="px-5 py-4">
+      <nav className="px-5 py-4 bg-white">
         <div className="mx-auto flex justify-between items-center">
           <Link href="/" className="flex md:ml-5 items-center">
             <Image
               src={logo.src} // replace with your logo
               alt="ABROAD EDUCARES Logo"
               className="h-8"
-              width={150}
-              height={50}
+              width={198}
+              height={0}
+              style={{ width: "12rem", height: "auto" }} 
             />
            
           </Link> 

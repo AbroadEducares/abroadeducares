@@ -4,10 +4,12 @@ import whiteLogo from "@public/whiteLogo.png";
 import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import world_map from "@public/assets/images/HomePage/world_map.png";
 import Button from "@/components/Button";
-import {Link,Image} from "next/link";
+import Link from "next/link";
+import Image from "next/image";
 import { UserContext } from '../app/context/UserContext';
 import { Toaster } from "react-hot-toast";
-const Footer = () => {
+
+const Footer = () => { 
   const {newsletterErrors,handleSubmitNewsletter,setNewsletterForm,NewsletterForm,setNewsletterErrors}=useContext(UserContext);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,7 +21,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="">
+    <footer >
       {/* Footer Top */}
       <div className="relative w-full mt-20 pt-10">
         <div className="relative w-[90%] md:w-[90%] xl:w-[85%] mx-auto block lg:flex items-center p-10 lg:p-20 shadow-lg bg-gray-800 overflow-hidden">
@@ -55,11 +57,14 @@ const Footer = () => {
         <div className="w-[90%] md:w-[90%] xl:w-[85%] pt-[13rem] mx-auto">
           {/* Logo and Description */}
           <div className="flex flex-col items-center text-center">
-            <Image
-              src={whiteLogo.src}
-              alt="abroad educares logo"
-              className="w-[12rem]"
-            />
+          <Image
+  src={whiteLogo.src}
+  alt="abroad educares logo"
+  width={192}  // Required for Next.js Image optimization
+  height={0}   // Will be auto-calculated based on the aspect ratio
+  style={{ width: "12rem", height: "auto" }} // Sets dynamic height based on width
+  className="w-[12rem]"  // Ensure responsiveness
+/>
             <h5 className="font-bold text-sm mt-5">Welcome to Abroad Educares.</h5>
             <p className="text-sm font-normal w-[80%] md:w-[40%]">
               WE HELP YOU REACH YOUR DESIRED COUNTRY Whether study Visa, tourist
@@ -190,5 +195,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;

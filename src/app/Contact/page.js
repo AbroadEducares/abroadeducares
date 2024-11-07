@@ -4,11 +4,11 @@ import call_operator from "@public/assets/images/ContactPage/call_operator.jpg";
 import Link from "next/link";
 import { FaLocationDot, FaBriefcase } from "react-icons/fa6";
 import { MdEmail, MdCall } from "react-icons/md";
-import { UserContext } from '../../app/context/UserContext';
+import { UserContext } from '../context/UserContext';
 import { Toaster } from "react-hot-toast";
 
 
-const Page = () => {
+const Contact = () => {
   const {ContactForm,setContactForm,handleSubmit,errors,setErrors}=useContext(UserContext);
   console.log("i m in the contact page",ContactForm)
 
@@ -242,4 +242,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Contact;

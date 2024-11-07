@@ -3,9 +3,9 @@ import React, { useContext } from 'react';
 import Link from 'next/link';
 import handshake from '@public/assets/images/AgentPage/handshake.jpg';
 import GetStartedImage from '@public/assets/images/AgentPage/GetStartedImage.jpg';
-import { UserContext } from '../../app/context/UserContext';
+import { UserContext } from '../context/UserContext';
 
-const Page = () => {
+const Agent = () => {
   const {agentformData,setagenterrors,agenterrors,setagentformData,handleSubmitAgent}=useContext(UserContext);
 
   const handleChange = (e) => {
@@ -36,7 +36,7 @@ const Page = () => {
       >
         <div className="absolute inset-0 bg-gray-900 bg-opacity-55 z-0"></div>
         <div className="relative z-10 w-full flex flex-col items-center gap-5 text-white">
-          <h2 className="font-extrabold text-5xl md:text-6xl uppercase">Become Our Agent</h2>
+          <h2 className="font-extrabold text-4xl md:text-6xl uppercase text-center">Become Our Agent</h2>
           <nav aria-label="breadcrumb">
             <ol className="flex space-x-2 text-white">
               <li>
@@ -176,4 +176,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Agent;

@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import EnquiryForm from "@/components/HomePageComponents/EnquiryForm";
 import HeroImg from "@public/assets/images/HomePage/HeroImg.jpg";
 import Button from "@/components/Button";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong,FaMapLocationDot  } from "react-icons/fa6";
 import happyTravels from "@public/assets/images/HomePage/happyTravels.jpg";
 import hat from "@public/assets/images/HomePage/hat.jpg";
 import passport from "@public/assets/images/HomePage/passport.jpg";
-import { FaAward, FaThumbsUp } from "react-icons/fa";
+import { FaAward, FaThumbsUp,FaCalendarCheck  } from "react-icons/fa";
 import VisaServiceCard from "@/components/HomePageComponents/VisaServiceCard";
 import ChooseYourVisa from "@/components/HomePageComponents/ChooseYourVisa";
 import CountriesCarousel from "@/components/ServicesComponent/CountriesCarousel";
@@ -21,7 +21,9 @@ import Man_in_BlueJeans from "@public/assets/images/HomePage/Man_in_BlueJeans.jp
 import TopView_of_document from "@public/assets/images/HomePage/TopView_of_document.jpg";
 import world_map from "@public/assets/images/HomePage/world_map.png";
 import Image from "next/image";
-export default function HomePage() {
+import { MdOutlineAccessTimeFilled } from "react-icons/md";
+
+export default function Home() {
 
   const [Experience, setExperience] = useState(0);
   const [Projects, setProjects] = useState(0);
@@ -65,16 +67,41 @@ export default function HomePage() {
             <div className="mt-4 flex gap-5 ">
               {/* white line */}
               <div className="w-[0.3rem]  bg-white"></div>
-              <div className="w-full lg:w-[80%]">
+              <div className="w-full">
                 <h1 className="leading-[4rem] lg:leading-none  text-[2.2rem] sm:text-[3.4rem] lg:text-[4rem] font-extralight">
                 Register for Global Exposure Education Fair:{" "}
                   <span className="font-bold">Your Pathway to World-Class Education!</span>
                 </h1>
               </div>
             </div>
-            <p className="py-8 w-[70%]">
-            Discover top international educational opportunities at our Global Education Fair. Connect with experts, explore study abroad options, and gain valuable insights to make informed choices for your global education journey.
-            </p>
+            {/* date venue time */}
+            <div className="mt-10">
+              <div className="flex items-center gap-3">
+              <FaCalendarCheck size={55} className="text-blue-700"/>
+              <div>
+
+                <h4 className="text-2xl font-bold">DATE</h4>
+                <h4 className="text-2xl">17th Nov 2024</h4>
+              </div>
+              </div>
+             
+              <div className="flex items-center gap-3 mt-5">
+              <MdOutlineAccessTimeFilled  size={55} className="text-blue-700"/>
+              <div>
+
+                <h4 className="text-2xl font-bold">TIME</h4>
+                <h4 className="text-2xl">10:30 A.M to 5:00 P.M</h4>
+              </div>
+              </div>
+              <div className="flex items-center gap-3 mt-5">
+              <FaMapLocationDot  size={55} className="text-blue-700"/>
+              <div>
+
+                <h4 className="text-2xl font-bold">VENUE</h4>
+                <h4 className="text-2xl">SVIET, Banur</h4>
+              </div>
+              </div>
+            </div>
           </div>
           <div className="w-full  lg:w-1/2 mt-8  lg:mt-0">
             {/* Enquiry form */}
