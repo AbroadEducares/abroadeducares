@@ -154,7 +154,7 @@ const handleEduFiarSubmit = async (e) => {
 
     if (isValid) {
       try {
-        const response = await axios.post("http://localhost:4000/api/v1/EduFair", eduFair);
+        const response = await axios.post("https://backend-of-abroad-educares.vercel.app/api/v1/EduFair", eduFair);
         console.log(response);
         if (response.status === 200) {
           toast.success("Form submitted successfully");
@@ -226,7 +226,7 @@ const handleEduFiarSubmit = async (e) => {
         setagenterrors(newagenterrors);
         if(isValid){
           try{
-            const response = await axios.post("http://localhost:4000/api/v1/AgentForm", agentformData);
+            const response = await axios.post("https://backend-of-abroad-educares.vercel.app/api/v1/AgentForm", agentformData);
             console.log(response);
             if(response.status === 200){
                 toast.success("Form submitted successfully");
@@ -271,7 +271,7 @@ const handleEduFiarSubmit = async (e) => {
 
     if (isNewsletterValid) {
       try {
-        const response = await axios.post("http://localhost:4000/api/v1/NewsLetter", NewsletterForm);
+        const response = await axios.post("https://backend-of-abroad-educares.vercel.app/api/v1/NewsLetter", NewsletterForm);
         console.log(response);
         if (response.status === 200) {
           toast.success("Newsletter subscription successful");

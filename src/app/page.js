@@ -61,13 +61,13 @@ export default function HomePage() {
 
         <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between px-4 md:px-4 lg:px-8 relative z-10">
           <div className="text-white px-2 sm:px-0 w-full lg:w-1/2">
-            <h3 className="uppercase font-medium text-xl">Abroad Educare</h3>
+            <h3 className="uppercase font-medium text-xl">Abroad Educares</h3>
             <div className="mt-4 flex gap-5 ">
               {/* white line */}
               <div className="w-[0.3rem]  bg-white"></div>
               <div className="w-full lg:w-[80%]">
                 <h1 className="leading-[4rem] lg:leading-none  text-[2.2rem] sm:text-[3.4rem] lg:text-[4rem] font-extralight">
-                Join the Global Education Fair:{" "}
+                Register for Global Exposure Education Fair:{" "}
                   <span className="font-bold">Your Pathway to World-Class Education!</span>
                 </h1>
               </div>

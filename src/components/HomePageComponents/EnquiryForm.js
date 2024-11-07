@@ -32,7 +32,7 @@ function EnquiryForm() {
         onSubmit={handleEduFiarSubmit}
       >
         <div className="pt-4 pb-8">
-          <h2 className="text-2xl font-bold text-start">Apply Now!</h2>
+          <h2 className="text-2xl font-bold text-start">Register Now!</h2>
           <div className="w-8 h-1 rounded-full bg-blue-600"></div>
         </div>
 
