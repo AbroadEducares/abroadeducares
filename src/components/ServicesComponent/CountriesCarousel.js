@@ -43,7 +43,7 @@ function Responsive() {
           {
             img: country_poland,
             title: "Poland",
-            para: "Poland's affordable living costs and growing economy make it an attractive destination for immigrants and investors.",
+            para: "Polands affordable living costs and growing economy make it an attractive destination for immigrants and investors.",
           },
           {
             img: country_uae,

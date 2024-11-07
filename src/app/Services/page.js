@@ -7,7 +7,7 @@ import Timeline from "@/components/ServicesComponent/Timeline";
 import DreamDestination from "@/components/ServicesComponent/DreamDestination";
 import CountriesCarousel from "@/components/ServicesComponent/CountriesCarousel";
 import world_map from "@public/assets/images/HomePage/world_map.png";
-const page = () => {
+const Page = () => {
   const GreatVisaContent = [
     {
       title: "Study Visa",
@@ -242,4 +242,4 @@ const programs = [
   );
 };
 
-export default page;
+export default Page;

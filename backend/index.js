@@ -3,6 +3,7 @@ const cors = require('cors');
 const { dbconnect } = require('./config/database');
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -17,6 +18,11 @@ app.use('/api/v1', userRoutes);
 app.use('/api/v1', newsletterRoutes); // Consistently named route import
 app.use('/api/v1', agentRoutes); 
 app.use('/api/v1', EduFairRoutes);
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the Edufair API, Hi1');
+}
+);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

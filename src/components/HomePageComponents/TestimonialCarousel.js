@@ -4,6 +4,7 @@ import Sumandeep from "@public/assets/images/HomePage/Sumandeep.jpg";
 import Chetan from "@public/assets/images/HomePage/Chetan.jpg";
 import Himanshu from "@public/assets/images/HomePage/Himanshu.jpg";
 import MananGarg from "@public/assets/images/HomePage/MananGarg.jpg";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -63,10 +64,12 @@ const TestimonialCarousel = () => {
           {testimonials.map((testimonial, index) => (
             <div className="w-full flex-shrink-0" key={index}>
               <div className="flex gap-5 items-center">
-                <img
+                <Image
                   src={testimonial.img}
                   alt={testimonial.name}
                   className="w-[5rem] h-[5rem] rounded-full"
+                  width={80}
+                  height={80}
                 />
                 <div className="flex flex-col">
                   <h3 className="font-bold text-xl text-blue-700">{testimonial.name}</h3>

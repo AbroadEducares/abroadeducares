@@ -13,7 +13,8 @@ import {
   FaInstagramSquare,
 } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
-const page = () => {
+import Image from "next/image";
+const Page = () => {
   return (
     <>
       <section
@@ -57,13 +58,13 @@ const page = () => {
             <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-4 mx-5 lg:mx-0">
               <div className="flex flex-col gap-4 items-center justify-center">
                 {/* Two images */}
-                <img
+                <Image
                   src={forex_stock.src}
                   alt="Passport"
                   className="w-[41rem] md:w-[28rem] h-[fit-content] lg:w-[17rem] lg:h-[17rem] object-left-top"
                   loading="lazy"
                 />
-                <img
+                <Image
                   src={smiley_students_library.src}
                   alt="Hat"
                   className="w-[41rem] md:w-[28rem] lg:w-[17rem] h-[17rem] object-cover"
@@ -72,13 +73,13 @@ const page = () => {
               </div>
               <div className="flex flex-col gap-4 items-center justify-center lg:mb-20 mb-0">
                 {/* Two images */}
-                <img
+                <Image
                   src={woman_working_travel.src}
                   alt="Passport"
                   className="w-[41rem] md:w-[28rem] h-[fit-content] lg:w-[17rem] lg:h-[17rem] object-cover"
                   loading="lazy"
                 />
-                <img
+                <Image
                   src={students_holding_map.src}
                   alt="Hat"
                   className="w-[41rem] md:w-[28rem] h-[fit-content] lg:w-[17rem] lg:h-[17rem] object-cover"
@@ -149,9 +150,9 @@ const page = () => {
                   </h3>
                   <p className="text-sm text-gray-800 mt-1">
                     We place great emphasis on trust, providing transparent
-                    legal advice that serves your best interests. We’re
+                    legal advice that serves your best interests. We&apos;re
                     committed to giving you realistic expectations, even if it
-                    means saying "NO" to avoid raising false hopes.
+                    means saying &quot;NO&quot; to avoid raising false hopes.
                   </p>
                 </div>
               </div>
@@ -198,18 +199,18 @@ const page = () => {
               </div>
             </div>
             <p className="text-sm text-white text-justify mt-6 lg:mt-10">
-              "At Abroad Educares, we’re proud to support students’ aspirations
+              &quot;At Abroad Educares, we&apos;re proud to support students&apos; aspirations
               to study abroad with expert Visa Assistance, GIC, and Financial
               Services. As industry leaders, we partner with institutions to
               create global opportunities and break down barriers in education.
-              With your trust, we’ll continue paving the way for transformative
-              academic journeys worldwide."
+              With your trust, we&apos;ll continue paving the way for transformative
+              academic journeys worldwide.&quot;
             </p>
           </div>
 
           {/* Social links */}
           <div className="flex  sm:flex-row items-start sm:items-center gap-4 mt-6 sm:mt-0">
-            <p className="text-white text-sm">Let's Connect!</p>
+            <p className="text-white text-sm">Let&apos;s Connect!</p>
             <div className="flex items-center">
               <div className="w-10 sm:w-20 bg-white h-[0.5px]"></div>
               <IoIosArrowForward color="white" />
@@ -242,4 +243,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

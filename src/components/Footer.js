@@ -4,10 +4,9 @@ import whiteLogo from "@public/whiteLogo.png";
 import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import world_map from "@public/assets/images/HomePage/world_map.png";
 import Button from "@/components/Button";
-import Link from "next/link";
+import {Link,Image} from "next/link";
 import { UserContext } from '../app/context/UserContext';
 import { Toaster } from "react-hot-toast";
-
 const Footer = () => {
   const {newsletterErrors,handleSubmitNewsletter,setNewsletterForm,NewsletterForm,setNewsletterErrors}=useContext(UserContext);
   const handleChange = (e) => {
@@ -56,7 +55,7 @@ const Footer = () => {
         <div className="w-[90%] md:w-[90%] xl:w-[85%] pt-[13rem] mx-auto">
           {/* Logo and Description */}
           <div className="flex flex-col items-center text-center">
-            <img
+            <Image
               src={whiteLogo.src}
               alt="abroad educares logo"
               className="w-[12rem]"

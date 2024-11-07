@@ -1,42 +1,9 @@
 import React from "react";
 import { FaMoneyBillWave,FaFileAlt,FaGraduationCap   } from "react-icons/fa";
 import { BsBank2 } from "react-icons/bs";
+import Image from "next/image";
 const Timeline = () => {
-  const timelineData = [
-    {
-      id: 1,
-      title: "Title of section 1",
-      date: "Jan 14",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde.",
-      icon: "📷",
-    },
-    {
-      id: 2,
-      title: "Title of section 2",
-      date: "Jan 18",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde.",
-      icon: "🎬",
-    },
-    {
-      id: 3,
-      title: "Title of section 3",
-      date: "Jan 24",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus.",
-      icon: "📷",
-    },
-    {
-      id: 4,
-      title: "Title of section 4",
-      date: "Feb 14",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde.",
-      icon: "📍",
-    },
-  ];
-
+ 
   return (
  <>
       <div className="text-center">
@@ -113,7 +80,7 @@ const Timeline = () => {
               </div>
             </div>
             <p className="text-sm mb-5 text-white">
-            Easily manage and transfer funds for students studying abroad with our secure, streamlined services. We ensure quick, hassle-free transfers so parents can support their children's education without the complexities of international banking.
+            Easily manage and transfer funds for students studying abroad with our secure, streamlined services. We ensure quick, hassle-free transfers so parents can support their children&apos;s education without the complexities of international banking.
             </p>
           </div>
         </div>

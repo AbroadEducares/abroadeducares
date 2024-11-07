@@ -4,6 +4,7 @@ import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { MdOutlineAccessTimeFilled, MdEmail, MdLocationOn,MdMenuOpen, MdMenu,MdOutlineLocalPhone  } from "react-icons/md";
 import logo from '@public/blackLogo.png';
 import Link from 'next/link';
+import Image from "next/image";
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   return (
@@ -47,10 +48,12 @@ export default function Navbar() {
       <nav className="px-5 py-4">
         <div className="mx-auto flex justify-between items-center">
           <Link href="/" className="flex md:ml-5 items-center">
-            <img
+            <Image
               src={logo.src} // replace with your logo
               alt="ABROAD EDUCARES Logo"
               className="h-8"
+              width={150}
+              height={50}
             />
            
           </Link> 
@@ -63,12 +66,7 @@ export default function Navbar() {
       <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
     </Link>
   </li>
-  {/* <li className="group relative">
-    <Link href="#" className="text-black hover:text-orange-500">
-      Coaching
-      <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-orange-500 group-hover:w-full"></span>
-    </Link> 
-  </li> */}
+ 
   <li className="group relative">
     <Link href="/Services" className="text-black hover:text-orange-500">
       Services
@@ -112,19 +110,19 @@ export default function Navbar() {
         <div className="lg:hidden bg-white">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li>
-              <Link href="#" className="text-black hover:text-orange-500">About Us</Link> 
+              <Link href="/" className="text-black hover:text-orange-500">Home</Link> 
             </li>
             <li>
-              <Link href="#" className="text-black hover:text-orange-500">Coaching</Link> 
+              <Link href="/About" className="text-black hover:text-orange-500">About Us</Link> 
             </li>
             <li>
-              <Link href="#" className="text-black hover:text-orange-500">Visa</Link> 
+              <Link href="/Services" className="text-black hover:text-orange-500">Services</Link> 
             </li>
             <li>
-              <Link href="#" className="text-black hover:text-orange-500">Blog</Link> 
+              <Link href="/Agent" className="text-black hover:text-orange-500">Become Out Agent</Link> 
             </li>
             <li>
-              <Link href="#" className="text-black hover:text-orange-500">Contact</Link> 
+              <Link href="/Contact" className="text-black hover:text-orange-500">Contact</Link> 
             </li>
            
           </ul>

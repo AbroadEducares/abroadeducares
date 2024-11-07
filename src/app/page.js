@@ -20,7 +20,7 @@ import student_with_books from "@public/assets/images/HomePage/student_with_book
 import Man_in_BlueJeans from "@public/assets/images/HomePage/Man_in_BlueJeans.jpg";
 import TopView_of_document from "@public/assets/images/HomePage/TopView_of_document.jpg";
 import world_map from "@public/assets/images/HomePage/world_map.png";
-
+import Image from "next/image";
 export default function HomePage() {
 
   const [Experience, setExperience] = useState(0);
@@ -75,11 +75,6 @@ export default function HomePage() {
             <p className="py-8 w-[70%]">
             Discover top international educational opportunities at our Global Education Fair. Connect with experts, explore study abroad options, and gain valuable insights to make informed choices for your global education journey.
             </p>
-            {/* <Button
-              text="discover more"
-              borderColor="border-white"
-              textColor="text-white"
-            /> */}
           </div>
           <div className="w-full  lg:w-1/2 mt-8  lg:mt-0">
             {/* Enquiry form */}
@@ -92,7 +87,7 @@ export default function HomePage() {
         <div className="w-full lg:w-[50%] flex items-end">
           <div className="ml-5 mt-8 lg:mt-0 lg:ml-10">
             <p>
-              Don’t Hesitate, Contact us for Better Help and Services.{" "}
+              Don&apos;t Hesitate, Contact us for Better Help and Services.{" "}
               <span className="font-bold">Explore All Categories.</span>
             </p>
           </div>
@@ -179,24 +174,36 @@ export default function HomePage() {
             <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-4 mx-5 lg:mx-0">
               <div className="flex flex-col gap-4 items-center justify-center">
                 {/* Two images */}
-                <img
-                  src={passport.src}
-                  alt="Passport"
-                  className="w-[41rem] md:w-[28rem] h-[fit-content] lg:w-[17rem] lg:h-[17rem] object-cover"
-                />
-                <img
-                  src={hat.src}
-                  alt="Hat"
-                  className="w-[41rem] md:w-[28rem] h-[fit-content] lg:w-[17rem] lg:h-[17rem] object-cover"
-                />
+                <div className="relative w-[17rem] h-[17rem]">
+  <Image
+    src={passport.src}
+    alt="Passport"
+    className="object-cover"
+    fill // Automatically takes width & height of parent div
+  />
+</div>
+
+<div className="relative w-[17rem] h-[17rem]">
+  <Image
+    src={hat.src}
+    alt="Hat"
+    className="object-cover"
+    fill
+  />
+</div>
+
               </div>
               <div className="flex items-center">
                 {/* Large image */}
-                <img
-                  src={happyTravels.src}
-                  alt="Happy Travels"
-                  className="w-[41rem] md:w-[27rem] h-[fit-content] lg:w-[20rem] lg:h-[30rem] object-cover"
-                />
+                <div className="relative w-[20rem] h-[30rem]">
+  <Image
+    src={happyTravels.src}
+    alt="Happy Travels"
+    className="object-cover"
+    fill
+  />
+</div>
+
               </div>
             </div>
           </div>
@@ -259,8 +266,8 @@ export default function HomePage() {
                     Our Presence
                   </h3>
                   <p className="text-sm text-gray-800 mt-1">
-                    We highly value trust and provide honest legal advice that's
-                    in your best interest. We are happy to say "NO" rather than
+                    We highly value trust and provide honest legal advice that&apos;s
+                    in your best interest. We are happy to say &quot;NO&quot; rather than
                     giving false hopes.
                   </p>
                 </div>
@@ -341,11 +348,15 @@ export default function HomePage() {
       <section className="w-full">
         <div className="w-[90%] md:w-[90%] xl:w-[85%] mt-20 py-10 mx-auto block lg:flex items-center justify-center h-[max-content]">
           <div className="w-[50%] lg:block hidden">
-            <img
-              src={testimonial_img.src}
-              alt="footerBg"
-              className="w-full  object-cover"
-            />
+          <div className="relative w-full h-[30rem]"> {/* Adjust height as needed */}
+  <Image
+    src={testimonial_img.src}
+    alt="footerBg"
+    className="object-cover"
+    layout="fill"
+  />
+</div>
+
           </div>
           <div className="mx-auto w-full lg:w-[50%] flex flex-col gap-10">
             <div className="lg:mt-16">
@@ -369,33 +380,6 @@ export default function HomePage() {
                   </div>
                 </div>
                 {/* testimonial carousel designing */}
-                {/* <div className="w-[95%]">
-                <div className="flex gap-5 items-center">
-                  <img
-                    src={Pragat.src}
-                    alt="Pragat"
-                    className="w-[5rem] h-[5rem] rounded-full"
-                  />
-                  <div className="flex flex-col">
-                    <h3 className="font-bold  text-xl text-blue-700">Pragat</h3>
-                    <p className="text-sm font-normal opacity-30 text-gray-800">
-                      Student
-                    </p>
-                  </div>
-                </div>
-
-                <div>
-                  <p className="text-sm font-normal py-6 text-gray-800">
-                    I like the Ambience and working style of Abroad Educares.I
-                    am delighted that with the help of Abroad Educares I got my
-                    Work visa for New Zealand in very short time.All the staff
-                    members are really helpful and they responded very quickly
-                    every time I had any query related to my status of
-                    Application.So all and all it was great experience for me
-                    throughout the journey.
-                  </p>
-                </div>
-              </div> */}
                 <TestimonialCarousel />
               </div>
             </div>
@@ -582,7 +566,7 @@ export default function HomePage() {
                 <div className="flex flex-col gap-4 mt-5 sm:mt-0">
                   <h4 className="font-bold ">Should I Study Abroad?</h4>{" "}
                   <p className="text-sm font-normal  text-gray-800">
-                    Are you asking yourself “should I study abroad?” Need a
+                    Are you asking yourself &quot;should I study abroad?&quot; Need a
                     little push in your in your deci..
                   </p>
                   <a
@@ -616,7 +600,7 @@ export default function HomePage() {
                     Difference Between Visit Visa & Tourist Visa?
                   </h4>{" "}
                   <p className="text-sm font-normal  text-gray-800">
-                    When you're planning a trip to a foreign country, one of the
+                    When you&apos;re planning a trip to a foreign country, one of the
                     first things....
                   </p>
                   <a

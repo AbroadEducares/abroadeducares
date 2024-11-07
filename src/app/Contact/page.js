@@ -8,7 +8,7 @@ import { UserContext } from '../../app/context/UserContext';
 import { Toaster } from "react-hot-toast";
 
 
-const Contact = () => {
+const Page = () => {
   const {ContactForm,setContactForm,handleSubmit,errors,setErrors}=useContext(UserContext);
   console.log("i m in the contact page",ContactForm)
 
@@ -242,4 +242,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Page;

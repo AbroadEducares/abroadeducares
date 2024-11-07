@@ -5,6 +5,7 @@ import country_canada from "@public/assets/images/HomePage/country_canada.jpg";
 import country_us from "@public/assets/images/HomePage/country_us.jpg";
 import country_uk from "@public/assets/images/HomePage/country_uk.jpg";
 import world_map from "@public/assets/images/HomePage/world_map.png";
+import Image from "next/image";
 
 const FavouriteDestination = () => {
   const FavouriteDestinationContent = [
@@ -76,7 +77,7 @@ const FavouriteDestination = () => {
               className="w-full lg:max-w-[19rem] bg-white border border-gray-200 shadow-md"
               key={index}
             >
-              <img className="w-full" src={item.img.src} alt={item.title} />
+              <Image className="w-full" src={item.img.src} alt={item.title} />
               <div className="p-5 text-center">
                 <a href="#">
                   <h3 className="font-bold my-5 text-xl text-gray-700">

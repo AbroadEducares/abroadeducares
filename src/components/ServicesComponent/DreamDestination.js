@@ -15,7 +15,7 @@ import country_malta from "@public/assets/images/ServicesPage/country_malta.jpg"
 import country_croatia from "@public/assets/images/ServicesPage/country_croatia.jpg";
 import country_cyprus from "@public/assets/images/ServicesPage/country_cyprus.jpg";
 import country_ireland from "@public/assets/images/ServicesPage/country_ireland.jpg";
-
+import Image from "next/image"; 
 const DreamDestination = () => {
   const DreamDestinationContent = [
     {
@@ -131,7 +131,7 @@ const DreamDestination = () => {
               className="w-full lg:max-w-[19rem] bg-white border border-gray-200 shadow-md"
               key={index}
             >
-              <img
+              <Image
                 className="w-full h-48 object-cover" // Set fixed height and cover object fit
                 src={item.img.src}
                 alt={item.title}

@@ -5,7 +5,7 @@ import handshake from '@public/assets/images/AgentPage/handshake.jpg';
 import GetStartedImage from '@public/assets/images/AgentPage/GetStartedImage.jpg';
 import { UserContext } from '../../app/context/UserContext';
 
-const page = () => {
+const Page = () => {
   const {agentformData,setagenterrors,agenterrors,setagentformData,handleSubmitAgent}=useContext(UserContext);
 
   const handleChange = (e) => {
@@ -176,4 +176,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
