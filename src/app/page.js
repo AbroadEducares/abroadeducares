@@ -50,7 +50,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative h-[85rem] sm:h-[80rem] md:h-[75rem] lg:h-[65rem] bg-cover bg-center bg-no-repeat flex items-center justify-center">
+      <section className="relative h-[95rem] sm:h-[85rem] md:h-[85rem] lg:h-[65rem] bg-cover bg-center bg-no-repeat flex items-center justify-center">
         {/* Gradient Overlay */}
         <div
           className="absolute inset-0 bg-gradient-to-t from-[#000080] via-[#000080] to-[#000080] brightness-[0.65]"
@@ -61,7 +61,7 @@ export default function Home() {
           }}
         ></div>
 
-        <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between px-4 md:px-4 lg:px-8 relative z-10">
+        <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between px-0 md:px-4 lg:px-8 relative z-10">
           <div className="text-white px-2 sm:px-0 w-full lg:w-1/2">
             <h3 className="uppercase font-medium text-xl">Abroad Educares</h3>
             <div className="mt-4 flex gap-5 ">
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
              
               <div className="flex items-center gap-3 mt-5">
-              <MdOutlineAccessTimeFilled  size={55} className="text-blue-700"/>
+              <FaCalendarCheck size={55} className="text-blue-700"/>
               <div>
 
                 <h4 className="text-2xl font-bold">TIME</h4>
@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="w-full  lg:w-1/2 mt-8  lg:mt-0">
+          <div className="w-full  lg:w-1/2 mt-8  lg:mt-0 md:pb-0 ">
             {/* Enquiry form */}
             <EnquiryForm />
           </div>
@@ -196,12 +196,12 @@ export default function Home() {
       <section className="mt-20 py-10">
         <div className="flex flex-col-reverse lg:flex-row justify-center px-0 lg:px-4 xl:px-0">
           {/* Left div */}
-          <div className="mt-10 lg:mt-0 ml-0 mr-5 lg:ml-14 w-full lg:w-[50%] flex items-center justify-center">
+          <div className="mt-10 lg:mt-0 ml-0 mr-5 lg:ml-14 w-full lg:w-[50%] hidden items-center justify-center md:flex">
             {/* Wrapper */}
             <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-4 mx-5 lg:mx-0">
               <div className="flex flex-col gap-4 items-center justify-center">
                 {/* Two images */}
-                <div className="relative w-[17rem] h-[17rem]">
+                <div className="relative w-full h-full md:w-[17rem] md:h-[17rem] ">
   <Image
     src={passport.src}
     alt="Passport"
@@ -210,7 +210,7 @@ export default function Home() {
   />
 </div>
 
-<div className="relative w-[17rem] h-[17rem]">
+<div className="relative md:w-[17rem] md:h-[17rem] w-full h-full">
   <Image
     src={hat.src}
     alt="Hat"
@@ -222,7 +222,7 @@ export default function Home() {
               </div>
               <div className="flex items-center">
                 {/* Large image */}
-                <div className="relative w-[20rem] h-[30rem]">
+                <div className="relative md:w-[20rem] md:h-[30rem] w-full h-full">
   <Image
     src={happyTravels.src}
     alt="Happy Travels"
@@ -304,7 +304,7 @@ export default function Home() {
         </div>
       </section>
       {/* Visa service */}
-      <section className="mt-20 py-10">
+      <section className=" mt-10 md:mt-20 py-10">
         <VisaServiceCard />
       </section>
       {/* Choose your visa */}

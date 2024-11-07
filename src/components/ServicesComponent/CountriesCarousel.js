@@ -126,6 +126,8 @@ function Responsive() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    dots:false,
+                    autoplaySpeed:2200,
                 },
             },
         ],
