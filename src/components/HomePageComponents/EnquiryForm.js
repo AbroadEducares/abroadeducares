@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { UserContext } from '../../app/context/UserContext';
 
 function EnquiryForm() {
-  const { eduFair, setEduFair, handleEduFiarSubmit, eduFairErrors, setEduFairErrors } = useContext(UserContext);
+  const { eduFair, setEduFair, handleEduFiarSubmit, eduFairErrors, setEduFairErrors,loading } = useContext(UserContext);
   const [focusedField, setFocusedField] = useState("");
 
   const handleChange = (e) => {
@@ -194,7 +194,6 @@ function EnquiryForm() {
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
-              defaultValue=""
             >
               <option value="" disabled>Select your Last Level of Study</option>
               <option value="+2 (pursuing/passout)">+2 (pursuing/passout)</option>
@@ -209,11 +208,16 @@ function EnquiryForm() {
         </div>
 
         <div className="flex items-center justify-between">
-          <button
-            className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
+        <button
+            className={`${
+              loading
+                ? "bg-blue-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700"
+            } transition-all duration-300 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline`}
             type="submit"
+            disabled={loading} // Disable button when loading
           >
-            Submit
+            {loading ? "Submitting..." : "Submit"} {/* Button text changes when loading */}
           </button>
           <Toaster />
         </div>

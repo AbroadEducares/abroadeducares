@@ -19,7 +19,7 @@ const Footer = () => {
     }));
     setNewsletterErrors((prevErrors) => ({ ...prevErrors, [name]: "" })); // Clear error on change
   };
-
+  const API_ID= process.env.UPLOADTHING_APP_ID;
   return (
     <footer >
       {/* Footer Top */}
@@ -57,8 +57,8 @@ const Footer = () => {
         <div className="w-[90%] md:w-[90%] xl:w-[85%] pt-[13rem] mx-auto">
           {/* Logo and Description */}
           <div className="flex flex-col items-center text-center">
-          <Image
-  src={whiteLogo.src}
+          <img
+  src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGmxYIqmaeG93wRxs1UtN0mBPS5dfEl8nXMDcJ`}
   alt="abroad educares logo"
   width={192}  // Required for Next.js Image optimization
   height={0}   // Will be auto-calculated based on the aspect ratio

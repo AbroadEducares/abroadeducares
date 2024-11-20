@@ -6,8 +6,11 @@ import logo from '@public/blackLogo.png';
 import Link from 'next/link';
 import Image from "next/image";
 
+// https://utfs.io/a/<APP_ID>/<FILE_KEY>
+
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const API_ID= process.env.UPLOADTHING_APP_ID;
   return (
     <header className="sticky top-0 z-50 ">
       {/* Top Bar */}
@@ -49,8 +52,9 @@ export default function Navbar() {
       <nav className="px-5 py-4 bg-white">
         <div className="mx-auto flex justify-between items-center">
           <Link href="/" className="flex md:ml-5 items-center">
-            <Image
-              src={logo.src} // replace with your logo
+            <img
+              src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGP5Npgs3ek6RCSzXuVAbvyn48w71QsGhaf9Lp`} // replace with your logo
+              // src={logo.src}
               alt="ABROAD EDUCARES Logo"
               className="h-8"
               width={198}
@@ -121,7 +125,7 @@ export default function Navbar() {
               <Link href="/Services" className="text-black hover:text-orange-500">Services</Link> 
             </li>
             <li>
-              <Link href="/Agent" className="text-black hover:text-orange-500">Become Out Agent</Link> 
+              <Link href="/Agent" className="text-black hover:text-orange-500">Become Our Agent</Link> 
             </li>
             <li>
               <Link href="/Contact" className="text-black hover:text-orange-500">Contact</Link> 

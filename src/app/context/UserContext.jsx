@@ -14,6 +14,7 @@ export const UserProvider = ({ children }) => {
     subject: '', 
     comments: '',
   });
+  const [loading,setLoading] = useState(false);
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -49,7 +50,7 @@ export const UserProvider = ({ children }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     // Regex Patterns
     const namePattern = /^[A-Za-z\s]+$/;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -110,10 +111,12 @@ export const UserProvider = ({ children }) => {
         comments:"",
       });
     }
+   
   };
 
 const handleEduFiarSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const namePattern = /^[A-Za-z\s]+$/;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phonePattern = /^\d{10}$/; // 10-digit phone for phone
@@ -176,6 +179,7 @@ const handleEduFiarSubmit = async (e) => {
         lastLevelOfStudy: ""
       });
     }
+    setLoading(false);
   };
   
   const handleSubmitAgent = async (e) => {
@@ -286,7 +290,7 @@ const handleEduFiarSubmit = async (e) => {
   };
   
   return (
-    <UserContext.Provider value={{ContactForm,setContactForm,handleSubmit,errors,setErrors,newsletterErrors,handleSubmitNewsletter,NewsletterForm,setNewsletterForm,setNewsletterErrors,agentformData,setagenterrors,agenterrors,setagentformData,handleSubmitAgent,eduFairErrors,setEduFairErrors,eduFair,setEduFair,handleEduFiarSubmit}}>
+    <UserContext.Provider value={{ContactForm,setContactForm,handleSubmit,errors,setErrors,newsletterErrors,handleSubmitNewsletter,NewsletterForm,setNewsletterForm,setNewsletterErrors,agentformData,setagenterrors,agenterrors,setagentformData,handleSubmitAgent,eduFairErrors,setEduFairErrors,eduFair,setEduFair,handleEduFiarSubmit,loading}}>
       {children}
     </UserContext.Provider>
   );

@@ -19,69 +19,70 @@ import country_croatia from "@public/assets/images/ServicesPage/country_croatia.
 import country_cyprus from "@public/assets/images/ServicesPage/country_cyprus.jpg";
 import country_ireland from "@public/assets/images/ServicesPage/country_ireland.jpg";
 function Responsive() {
+  const API_ID= process.env.UPLOADTHING_APP_ID;
     const DreamDestinationContent = [
         {
-            img: country_france,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYGKrlwTkD1P83iuYWmE2htTC9ZJryxIRoaDgeO`,
             title: "France",
             para: "France boasts a strong economy, rich culture, and a high quality of life in the heart of Europe.",
           },
           {
-            img: country_canada,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYGQyRmQvxXmeWtPUgARL40S1Vz6nKvN3Dyb2uw`,
             title: "Canada",
             para: "Canada is a great place to live, work, study or do business. Ranked as the second-best country.",
           },
           {
-            img: country_singapore,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYGneiA7WoEcXSMgyCWHhjDL6ORUIarQx5PA8ow`,
             title: "Singapore",
             para: "Singapore is a global financial center offering cutting-edge infrastructure and a multicultural professional environment.",
           },
           {
-            img: country_australia,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYG7nnCxcl24Pn8rOhMfb5TI6WiVkBsFduUHRNc`,
             title: "Australia",
             para: "Australia is known as the land of opportunities, one of the most famous and popular destinations.",
           },
           {
-            img: country_poland,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYG2iexWRXRNLdHgAkZuw20Vptr8q6Jmc9alMO7`,
             title: "Poland",
             para: "Polands affordable living costs and growing economy make it an attractive destination for immigrants and investors.",
           },
           {
-            img: country_uae,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYGemI3X8hBLsAnadqJM5v6CIPOmT7jVKZlygGD`,
             title: "UAE",
             para: "The UAE is a global hub offering luxury living, tax-free income, and unmatched business and job opportunities.",
           },
           {
-            img: country_germany,
+            img:`https://utfs.io/a/${API_ID}/J3qszI0odXYGFpjDj6L09B2KrSEQVqmF3lWhIyNed4bvG18X`,
             title: "Germany",
             para: "Germany offers world-class education, a booming job market, and a high standard of living in Europe.",
           },
           {
-            img: country_us,
+            img:`https://utfs.io/a/${API_ID}/J3qszI0odXYGUihzwVQ5hIN6OqPVkXzYGJTg7AsW13vESBlj`,
             title: "United States",
             para: "Looking for a Green Card? With a GDP of 21.5 Trillion, the USA retains the number 1 position globally.",
           },
           {
-            img: country_malta,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYGyKtrUy8xm6TZSyVOX0Pkf3FDsRvgEMLuGcwa`,
             title: "Malta",
             para: "A sunny Mediterranean island with favorable immigration policies, making it ideal for business and relaxation.",
           },
           {
-            img: country_croatia,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYG2seGNJXRNLdHgAkZuw20Vptr8q6Jmc9alMO7`,
             title: "Croatia",
             para: "Known for its natural beauty and welcoming environment, Croatia offers great opportunities for work-life balance.",
           },
           {
-            img: country_cyprus,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYGUa8TfjQ5hIN6OqPVkXzYGJTg7AsW13vESBlj`,
             title: "Cyprus",
             para: "Cyprus offers a peaceful lifestyle with friendly tax policies and easy access to Europe and the Middle East.",
           },
           {
-            img: country_uk,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYGbxgIbQcNvAjehPYg42LbktmOGMnqC60cyoUa`,
             title: "United Kingdom",
             para: "Discover a country filled with epic landscapes, fairy-tale castles, and vibrant modern cities.",
           },
           {
-            img: country_ireland,
+            img: `https://utfs.io/a/${API_ID}/J3qszI0odXYGtjkmbiJfQzuwarxvEyT6iemgbSOUcID1nsoZ`,
             title: "Ireland",
             para: "Ireland, a tech and business hub, combines beautiful landscapes with excellent career growth and education opportunities.",
           },
@@ -139,7 +140,7 @@ function Responsive() {
                 {DreamDestinationContent.map((item, index) => (
                     <div className="px-2" key={index}> {/* Add padding for gap between slides */}
                         <div className="h-[25rem] bg-white border border-gray-200 shadow-md flex flex-col justify-between">
-                            <Image
+                            <img
                                 className="w-full h-48 object-cover"
                                 src={item.img}
                                 alt={item.title}

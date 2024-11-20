@@ -24,7 +24,7 @@ import Image from "next/image";
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
 
 export default function Home() {
-
+  const API_ID= process.env.UPLOADTHING_APP_ID;
   const [Experience, setExperience] = useState(0);
   const [Projects, setProjects] = useState(0);
 
@@ -77,7 +77,7 @@ export default function Home() {
             {/* date venue time */}
             <div className="mt-10">
               <div className="flex items-center gap-3">
-              <FaCalendarCheck size={55} className="text-blue-700"/>
+              <FaCalendarCheck size={55} className="text-white"/>
               <div>
 
                 <h4 className="text-2xl font-bold">DATE</h4>
@@ -86,7 +86,7 @@ export default function Home() {
               </div>
              
               <div className="flex items-center gap-3 mt-5">
-              <FaCalendarCheck size={55} className="text-blue-700"/>
+              <MdOutlineAccessTimeFilled  size={55} className="text-white"/>
               <div>
 
                 <h4 className="text-2xl font-bold">TIME</h4>
@@ -94,7 +94,7 @@ export default function Home() {
               </div>
               </div>
               <div className="flex items-center gap-3 mt-5">
-              <FaMapLocationDot  size={55} className="text-blue-700"/>
+              <FaMapLocationDot  size={55} className="text-white  "/>
               <div>
 
                 <h4 className="text-2xl font-bold">VENUE</h4>
@@ -202,20 +202,20 @@ export default function Home() {
               <div className="flex flex-col gap-4 items-center justify-center">
                 {/* Two images */}
                 <div className="relative w-full h-full md:w-[17rem] md:h-[17rem] ">
-  <Image
-    src={passport.src}
+  <img
+   src={`https://utfs.io/a/${API_ID}/J3qszI0odXYG1wbK7B0lc6KYjVNtvIni5qPDhgAOb9Qlfrxp`}
     alt="Passport"
-    className="object-cover"
-    fill // Automatically takes width & height of parent div
+    className="object-cover h-full w-full"
+    
+    
   />
 </div>
 
 <div className="relative md:w-[17rem] md:h-[17rem] w-full h-full">
-  <Image
-    src={hat.src}
+  <img
+     src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGCgv24jm8UiP5BnYc1opjX7zWkFO32Z0KdSGt`}
     alt="Hat"
-    className="object-cover"
-    fill
+    className="object-cover w-full h-full"
   />
 </div>
 
@@ -223,10 +223,10 @@ export default function Home() {
               <div className="flex items-center">
                 {/* Large image */}
                 <div className="relative md:w-[20rem] md:h-[30rem] w-full h-full">
-  <Image
-    src={happyTravels.src}
+  <img
+     src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGoy9KOXPeoPFtRZgCiSdmYIpHGABq4O9VQ0XD`}
     alt="Happy Travels"
-    className="object-cover"
+    className="object-cover w-full h-full "
     fill
   />
 </div>
@@ -376,11 +376,11 @@ export default function Home() {
         <div className="w-[90%] md:w-[90%] xl:w-[85%] mt-20 py-10 mx-auto block lg:flex items-center justify-center h-[max-content]">
           <div className="w-[50%] lg:block hidden">
           <div className="relative w-full h-[30rem]"> {/* Adjust height as needed */}
-  <Image
-    src={testimonial_img.src}
+  <img
+     src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGispF60wncK2JHgkCLjUlpVNmO0AtWq7Ze9fr`}
     alt="footerBg"
-    className="object-cover"
-    layout="fill"
+    className="object-cover h-full w-full"
+    
   />
 </div>
 

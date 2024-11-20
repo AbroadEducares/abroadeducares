@@ -16,6 +16,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 
 const About = () => {
+  const API_ID= process.env.UPLOADTHING_APP_ID;
   return (
     <>
       <section
@@ -58,15 +59,15 @@ const About = () => {
           <div className="w-full lg:w-1/2 flex items-center justify-center">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <Image
-                  src={forex_stock.src}
+                <img
+                 src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGwGk1dCUqlUXJDVPSRW7Z4ayeucOfH0G6xLbK`}
                   alt="Forex stock"
                   width={400}
                   height={300}
                   className="object-cover w-full h-48 lg:h-64 rounded-lg"
                 />
-                <Image
-                  src={smiley_students_library.src}
+                <img
+                 src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGPmXPSg3ek6RCSzXuVAbvyn48w71QsGhaf9Lp`}
                   alt="Students in library"
                   width={400}
                   height={300}
@@ -74,15 +75,15 @@ const About = () => {
                 />
               </div>
               <div className="space-y-4 mt-8">
-                <Image
-                  src={woman_working_travel.src}
+                <img
+                  src={`https://utfs.io/a/${API_ID}/J3qszI0odXYG6426PBI8TRQXUKL3Ex5Ny6buWkpOMtZJlcBI`}
                   alt="Woman working while traveling"
                   width={400}
                   height={300}
                   className="object-cover w-full h-48 lg:h-64 rounded-lg"
                 />
-                <Image
-                  src={students_holding_map.src}
+                <img
+                  src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGEUebLiWW8w6KUftDiSHblsQZhLPENdkrgB4C`}
                   alt="Students holding a map"
                   width={400}
                   height={300}
@@ -133,7 +134,7 @@ const About = () => {
                 <div>
                   <h3 className="font-bold text-xl text-gray-700 mb-2">Our Commitment</h3>
                   <p className="text-sm text-gray-800">
-                    We place great emphasis on trust, providing transparent legal advice that serves your best interests. We're committed to giving you realistic expectations, even if it means saying "NO" to avoid raising false hopes.
+                    We place great emphasis on trust, providing transparent legal advice that serves your best interests. We&apos;re committed to giving you realistic expectations, even if it means saying &quot;NO&quot; to avoid raising false hopes.
                   </p>
                 </div>
               </div>
