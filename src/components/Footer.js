@@ -47,7 +47,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="relative z-10 mt-5 lg:mt-0 lg:ml-auto">
-            <Button text="Contact Us" textColor="text-white" href="/Contact#contactForm"/>
+            <Button text="Contact Us" textColor="text-white" href="/Contact"/>
           </div>
         </div>
       </div>

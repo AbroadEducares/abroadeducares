@@ -460,7 +460,7 @@ export default function Home() {
                 with the latest changes, thus improving the management of
                 applications.
               </p>
-              <Button text="Contact Us" textColor="text-white" href="/Contact#contactForm"/>
+              <Button text="Contact Us" textColor="text-white" href="/Contact"/>
             </div>
           </div>
           <div className="lg:block hidden"></div>
