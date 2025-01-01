@@ -69,39 +69,13 @@ export default function Home() {
               <div className="w-[0.3rem]  bg-white"></div>
               <div className="w-full">
                 <h1 className="leading-[4rem] lg:leading-none  text-[2.2rem] sm:text-[3.4rem] lg:text-[4rem] font-extralight">
-                Register for Global Exposure Education Fair:{" "}
-                  <span className="font-bold">Your Pathway to World-Class Education!</span>
+                Start Your Global Exposure Journey with Abroad Educares:{" "}
+                  <span className="font-bold">Unlock Your World-Class Education Pathway!</span>
                 </h1>
               </div>
             </div>
-            {/* date venue time */}
-            <div className="mt-10">
-              <div className="flex items-center gap-3">
-              <FaCalendarCheck size={55} className="text-white"/>
-              <div>
-
-                <h4 className="text-2xl font-bold">DATE</h4>
-                <h4 className="text-2xl">17th Nov 2024</h4>
-              </div>
-              </div>
-             
-              <div className="flex items-center gap-3 mt-5">
-              <MdOutlineAccessTimeFilled  size={55} className="text-white"/>
-              <div>
-
-                <h4 className="text-2xl font-bold">TIME</h4>
-                <h4 className="text-2xl">10:30 A.M to 5:00 P.M</h4>
-              </div>
-              </div>
-              <div className="flex items-center gap-3 mt-5">
-              <FaMapLocationDot  size={55} className="text-white  "/>
-              <div>
-
-                <h4 className="text-2xl font-bold">VENUE</h4>
-                <h4 className="text-2xl">SVIET, Banur</h4>
-              </div>
-              </div>
-            </div>
+          
+          
           </div>
           <div className="w-full  lg:w-1/2 mt-8  lg:mt-0 md:pb-0 ">
             {/* Enquiry form */}
@@ -203,7 +177,8 @@ export default function Home() {
                 {/* Two images */}
                 <div className="relative w-full h-full md:w-[17rem] md:h-[17rem] ">
   <img
-   src={`https://utfs.io/a/${API_ID}/J3qszI0odXYG1wbK7B0lc6KYjVNtvIni5qPDhgAOb9Qlfrxp`}
+  //  src={`https://utfs.io/a/${API_ID}/J3qszI0odXYG1wbK7B0lc6KYjVNtvIni5qPDhgAOb9Qlfrxp`}
+  src={passport.src}
     alt="Passport"
     className="object-cover h-full w-full"
     
@@ -213,7 +188,8 @@ export default function Home() {
 
 <div className="relative md:w-[17rem] md:h-[17rem] w-full h-full">
   <img
-     src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGCgv24jm8UiP5BnYc1opjX7zWkFO32Z0KdSGt`}
+    //  src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGCgv24jm8UiP5BnYc1opjX7zWkFO32Z0KdSGt`}
+    src={hat.src}
     alt="Hat"
     className="object-cover w-full h-full"
   />
@@ -224,7 +200,8 @@ export default function Home() {
                 {/* Large image */}
                 <div className="relative md:w-[20rem] md:h-[30rem] w-full h-full">
   <img
-     src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGoy9KOXPeoPFtRZgCiSdmYIpHGABq4O9VQ0XD`}
+    //  src={`https://utfs.io/a/${API_ID}/J3qszI0odXYGoy9KOXPeoPFtRZgCiSdmYIpHGABq4O9VQ0XD`}
+    src={happyTravels.src}
     alt="Happy Travels"
     className="object-cover w-full h-full "
     fill

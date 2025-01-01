@@ -109,6 +109,12 @@ const Footer = () => {
                     Visa
                   </Link>
                 </li>
+                <li className="mb-2">
+                  <Link href="/privacy-policy" className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300 cursor-pointer">
+                    <span className="mr-2 text-blue-600 text-2xl">{">"}</span>{" "}
+                    Privacy Policy
+                  </Link>
+                </li>
               </ul>
             </nav>
 

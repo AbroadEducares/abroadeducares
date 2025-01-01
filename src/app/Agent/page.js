@@ -6,7 +6,7 @@ import GetStartedImage from '@public/assets/images/AgentPage/GetStartedImage.jpg
 import { UserContext } from '../context/UserContext';
 
 const Agent = () => {
-  const {agentformData,setagenterrors,agenterrors,setagentformData,handleSubmitAgent}=useContext(UserContext);
+  const {agentformData,setagenterrors,agenterrors,setagentformData,handleSubmitAgent,loading}=useContext(UserContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -162,11 +162,16 @@ const Agent = () => {
                 rows={4}
               />
 
-              <button
-                className="bg-blue-700 text-white py-3 w-full uppercase border-[0.5px] hover:bg-white hover:border-blue-700 hover:text-blue-700 transition-all duration-300"
+<button
+                className={`${
+                  loading
+                    ? "bg-blue-400 cursor-not-allowed hover:bg-blue-400 text-white hover:text-white"
+                    : "bg-blue-600 hover:bg-blue-700"
+                  } bg-blue-700 text-white py-3 w-full uppercase border-[0.5px] hover:bg-white hover:border-blue-700 hover:text-blue-700 transition-all duration-300`}
                 type="submit"
+                disabled={loading} // Disable button when loading
               >
-                Submit
+                {loading ? "Submitting..." : "Send Message"}
               </button>
             </form>
           </div>

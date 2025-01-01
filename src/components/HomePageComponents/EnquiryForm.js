@@ -5,16 +5,17 @@ import toast, { Toaster } from "react-hot-toast";
 import { UserContext } from '../../app/context/UserContext';
 
 function EnquiryForm() {
-  const { eduFair, setEduFair, handleEduFiarSubmit, eduFairErrors, setEduFairErrors,loading } = useContext(UserContext);
+  
+  const { ContactForm,setContactForm,handleSubmit,errors,setErrors,loading } = useContext(UserContext);
   const [focusedField, setFocusedField] = useState("");
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setEduFair((prevValues) => ({
+    setContactForm((prevValues) => ({
       ...prevValues,
       [id]: value,
     }));
-    setEduFairErrors((preveduFairErrors) => ({ ...preveduFairErrors, [id]: "" })); // Clear error on change
+    setErrors((preverrors) => ({ ...preverrors, [id]: "" })); // Clear error on change
   };
 
   const handleFocus = (e) => {
@@ -29,10 +30,10 @@ function EnquiryForm() {
     <div className="w-[90%] sm:w-[80%] max-w-lg mx-auto">
       <form
         className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 border border-gray-300"
-        onSubmit={handleEduFiarSubmit}
+        onSubmit={handleSubmit}
       >
         <div className="pt-4 pb-8">
-          <h2 className="text-2xl font-bold text-start">Register Now!</h2>
+          <h2 className="text-2xl font-bold text-start">Enquiry Now!</h2>
           <div className="w-8 h-1 rounded-full bg-blue-600"></div>
         </div>
 
@@ -53,14 +54,14 @@ function EnquiryForm() {
               id="name"
               type="text"
               placeholder="Enter your name"
-              value={eduFair.name}
+              value={ContactForm.name}
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
             />
           </div>
-          {eduFairErrors.name && (
-            <p className="text-red-500 text-sm mt-1">{eduFairErrors.name}</p>
+          {errors.name && (
+            <p className="text-red-500 text-sm mt-1">{errors.name}</p>
           )}
         </div>
 
@@ -82,14 +83,14 @@ function EnquiryForm() {
                 id="email"
                 type="email"
                 placeholder="Your email"
-                value={eduFair.email}
+                value={ContactForm.email}
                 onChange={handleChange}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
               />
             </div>
-            {eduFairErrors.email && (
-              <p className="text-red-500 text-sm mt-1">{eduFairErrors.email}</p>
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
             )}
           </div>
           <div>
@@ -108,104 +109,76 @@ function EnquiryForm() {
                 id="phone"
                 type="tel"
                 placeholder="Contact No."
-                value={eduFair.phone}
+                value={ContactForm.phone}
                 onChange={handleChange}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
               />
             </div>
-            {eduFairErrors.phone && (
-              <p className="text-red-500 text-sm mt-1">{eduFairErrors.phone}</p>
+            {errors.phone && (
+              <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
             )}
           </div>
         </div>
 
-        {/* Address and City Inputs */}
+        {/* subject*/}
         <div className="mb-8">
           <div
             className={`flex items-center border rounded ${
-              focusedField === "address" ? "border-blue-500" : "border-gray-300"
+              focusedField === "subject" ? "border-blue-500" : "border-gray-300"
             }`}
           >
             <FaBook
               className={`text-gray-500 mr-2 ml-2 ${
-                focusedField === "address" ? "text-blue-500" : ""
+                focusedField === "subject" ? "text-blue-500" : ""
               }`}
             />
             <input
               className="appearance-none border-none w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none"
-              id="address"
+              id="subject"
               type="text"
-              placeholder="Enter your Residence Address"
-              value={eduFair.address}
+              placeholder="Enter your subject"
+              value={ContactForm.subject}
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
             />
           </div>
-          {eduFairErrors.address && (
-            <p className="text-red-500 text-sm mt-1">{eduFairErrors.address}</p>
+          {errors.subject && (
+            <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
           )}
         </div>
 
+          {/* comment */}
         <div className="mb-8">
           <div
             className={`flex items-center border rounded ${
-              focusedField === "city" ? "border-blue-500" : "border-gray-300"
+              focusedField === "comment" ? "border-blue-500" : "border-gray-300"
             }`}
           >
             <FaBook
               className={`text-gray-500 mr-2 ml-2 ${
-                focusedField === "city" ? "text-blue-500" : ""
+                focusedField === "comment" ? "text-blue-500" : ""
               }`}
             />
             <input
               className="appearance-none border-none w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none"
-              id="city"
+              id="comment"
               type="text"
-              placeholder="Enter your City"
-              value={eduFair.city}
+              placeholder="Enter your comment"
+              value={ContactForm.comment}
               onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
             />
           </div>
-          {eduFairErrors.city && (
-            <p className="text-red-500 text-sm mt-1">{eduFairErrors.city}</p>
+          {errors.comment && (
+            <p className="text-red-500 text-sm mt-1">{errors.comment}</p>
           )}
         </div>
 
-        {/* Last Level of Study Select */}
-        <div className="mb-8">
-          <div
-            className={`flex items-center border rounded ${
-              focusedField === "lastLevelOfStudy" ? "border-blue-500" : "border-gray-300"
-            }`}
-          >
-            <FaBook
-              className={`text-gray-500 mr-2 ml-2 ${
-                focusedField === "lastLevelOfStudy" ? "text-blue-500" : ""
-              }`}
-            />
-            <select
-              id="lastLevelOfStudy"
-              className="appearance-none border-none w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none"
-              value={eduFair.lastLevelOfStudy}
-              onChange={handleChange}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
-            >
-              <option value="" disabled>Select your Last Level of Study</option>
-              <option value="+2 (pursuing/passout)">+2 (pursuing/passout)</option>
-              <option value="Graduation">Graduation</option>
-              <option value="Post Graduation & above">Post Graduation & above</option>
-            </select>
-            <FaChevronDown className="text-gray-500 mr-2" />
-          </div>
-          {eduFairErrors.lastLevelOfStudy && (
-            <p className="text-red-500 text-sm mt-1">{eduFairErrors.lastLevelOfStudy}</p>
-          )}
-        </div>
+       
+   
 
         <div className="flex items-center justify-between">
         <button

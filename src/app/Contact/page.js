@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast";
 
 
 const Contact = () => {
-  const {ContactForm,setContactForm,handleSubmit,errors,setErrors}=useContext(UserContext);
+  const {ContactForm,setContactForm,handleSubmit,errors,setErrors,loading}=useContext(UserContext);
   console.log("i m in the contact page",ContactForm)
 
   const handleChange = (e) => {
@@ -218,20 +218,25 @@ const Contact = () => {
               {errors.subject && <p className="text-red-500 text-sm mb-5">{errors.subject}</p>}
 
               <textarea
-                id="comments"
+                id="comment"
                 placeholder="Comments"
-                value={ContactForm.comments}
+                value={ContactForm.comment}
                 onChange={handleChange}
-                className={inputClassName(errors.comments)}
+                className={inputClassName(errors.comment)}
                 rows={5}
               />
-              {errors.comments && <p className="text-red-500 text-sm mb-5">{errors.comments}</p>}
+              {errors.comment && <p className="text-red-500 text-sm mb-5">{errors.comment}</p>}
 
               <button
-                className="bg-blue-700 text-white py-3 w-full uppercase border-[0.5px] hover:bg-white hover:border-blue-700 hover:text-blue-700 transition-all duration-300"
+                className={`${
+                  loading
+                    ? "bg-blue-400 cursor-not-allowed hover:bg-blue-400 text-white hover:text-white"
+                    : "bg-blue-600 hover:bg-blue-700"
+                  } bg-blue-700 text-white py-3 w-full uppercase border-[0.5px] hover:bg-white hover:border-blue-700 hover:text-blue-700 transition-all duration-300`}
                 type="submit"
+                disabled={loading} // Disable button when loading
               >
-                Send Message
+                {loading ? "Submitting..." : "Send Message"}
               </button>
             </form>
             <Toaster/>
