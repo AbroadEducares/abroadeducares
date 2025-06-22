@@ -21,7 +21,7 @@ const About = () => {
     <>
       <section
         style={{
-          backgroundImage: `url(${students_writing.src})`, // If the image is imported
+          backgroundImage: `url(${students_writing.src})`, // Remove the quotes inside url()
         }}
         className="bg-no-repeat relative bg-center bg-cover w-full h-[25rem] flex items-center justify-center"
       >
@@ -164,7 +164,7 @@ const About = () => {
           <div
             className="col-span-4 bg-cover bg-top lg:bg-top grayscale contrast-100 h-[15rem] sm:h-[25rem] lg:h-auto"
             style={{
-              backgroundImage: `url(${ceo2.src})`,
+              backgroundImage: `url(${ceo2.src})`, // Remove the quotes inside url()
             }}
           ></div>
 
