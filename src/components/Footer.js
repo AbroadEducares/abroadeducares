@@ -135,8 +135,7 @@ const Footer = () => {
               <ul className="list-none">
                 <li className="mb-2">
                   <div className="flex items-center text-sm font-normal hover:text-blue-600 transition-all duration-300">
-                    <span className="mr-2 text-blue-600">{">"}</span> La Prisma
-                    Market, Nagla Rd, Zirakpur, Punjab
+                    <span className="mr-2 text-blue-600">{">"}</span> office number 04,first floor,la Prisma Market Nagla Road Zirakpur,140603,Punjab
                   </div>
                 </li>
                 <li className="mb-2">
